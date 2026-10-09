@@ -1,0 +1,455 @@
+{
+  "name": "APM-2.1-preview",
+  "emitLegacyScripts": true,
+  "syncRules": [
+    {
+      "pattern": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Boot.luau",
+      "use": "legacyClientScript"
+    },
+    {
+      "pattern": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Notices.luau",
+      "use": "legacyClientScript"
+    },
+    {
+      "pattern": "src/StarterPlayer/StarterPlayerScripts/Recovery.luau",
+      "use": "legacyClientScript"
+    }
+  ],
+  "tree": {
+    "$className": "DataModel",
+    "$ignoreUnknownInstances": true,
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "$ignoreUnknownInstances": true,
+      "APM_Core": {
+        "$ignoreUnknownInstances": true,
+        "$className": "Model",
+        "$attributes": {
+          "APMChannel": {
+            "String": "experimental"
+          },
+          "APMCore": {
+            "Bool": true
+          },
+          "APMInstallationSchema": {
+            "Float64": 3
+          },
+          "APMLicense": {
+            "String": "MIT"
+          },
+          "APMVersion": {
+            "String": "2.1.0-preview.1"
+          }
+        },
+        "Server": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder",
+          "APMService": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/ServerScriptService/APM_Server/APMService.luau"
+          },
+          "Core": {
+            "$ignoreUnknownInstances": true,
+            "$className": "Folder",
+            "AutoBridge": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/AutoBridge.luau"
+            },
+            "Controls": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Controls.luau"
+            },
+            "Extensions": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Extensions.luau"
+            },
+            "Grades": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Grades.luau"
+            },
+            "Guard": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Guard.luau"
+            },
+            "Journal": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Journal.luau"
+            },
+            "Preferences": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Preferences.luau"
+            },
+            "Profiles": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Profiles.luau"
+            },
+            "Ranks": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Ranks.luau"
+            },
+            "Roster": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Roster.luau"
+            },
+            "Sentinel": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Sentinel.luau"
+            },
+            "Sessions": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Sessions.luau"
+            },
+            "Simulation": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Simulation.luau"
+            },
+            "SuiteConfig": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/SuiteConfig.luau"
+            },
+            "TextFilter": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/TextFilter.luau"
+            },
+            "Version": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Core/Version.luau"
+            }
+          },
+          "Modules": {
+            "$ignoreUnknownInstances": true,
+            "$className": "Folder",
+            "Ban": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Ban.luau"
+            },
+            "Bring": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Bring.luau"
+            },
+            "Freeze": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Freeze.luau"
+            },
+            "GiveTool": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/GiveTool.luau"
+            },
+            "Godmode": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Godmode.luau"
+            },
+            "Heal": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Heal.luau"
+            },
+            "Invisible": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Invisible.luau"
+            },
+            "JumpPower": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/JumpPower.luau"
+            },
+            "Kick": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Kick.luau"
+            },
+            "Kill": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Kill.luau"
+            },
+            "Leaderstats": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Leaderstats.luau"
+            },
+            "Mute": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Mute.luau"
+            },
+            "Respawn": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Respawn.luau"
+            },
+            "Return": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Return.luau"
+            },
+            "Shutdown": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Shutdown.luau"
+            },
+            "Speed": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Speed.luau"
+            },
+            "Teleport": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Teleport.luau"
+            },
+            "TimeOfDay": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/TimeOfDay.luau"
+            },
+            "ToSpawn": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/ToSpawn.luau"
+            },
+            "Unban": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Unban.luau"
+            },
+            "Warn": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ServerScriptService/APM_Server/Modules/Warn.luau"
+            }
+          },
+          "Settings": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/ServerScriptService/APM_Server/Settings.luau"
+          }
+        },
+        "Shared": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder",
+          "Config": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/ReplicatedStorage/APM_Shared/Config.luau"
+          },
+          "Configuration": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/ReplicatedStorage/APM_Shared/Configuration.luau"
+          },
+          "Lang": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/ReplicatedStorage/APM_Shared/Lang.luau",
+            "de": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ReplicatedStorage/APM_Shared/Lang/de.luau"
+            },
+            "en": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ReplicatedStorage/APM_Shared/Lang/en.luau"
+            },
+            "es": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ReplicatedStorage/APM_Shared/Lang/es.luau"
+            },
+            "fr": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ReplicatedStorage/APM_Shared/Lang/fr.luau"
+            },
+            "pt": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/ReplicatedStorage/APM_Shared/Lang/pt.luau"
+            }
+          },
+          "Remotes": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/ReplicatedStorage/APM_Shared/Remotes.luau"
+          }
+        },
+        "ClientTemplates": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder",
+          "APM_Client": {
+            "$ignoreUnknownInstances": true,
+            "$className": "Folder",
+            "APM_Boot": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Boot.luau",
+              "$properties": {
+                "Disabled": false
+              }
+            },
+            "CategoryPage": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/CategoryPage.luau"
+            },
+            "Components": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "AutoBridgePanel": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Components/AutoBridgePanel.luau"
+              }
+            },
+            "Core": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Core.luau"
+            },
+            "Pages": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "Bans": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Bans.luau"
+              },
+              "Diagnostics": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Diagnostics.luau"
+              },
+              "Game": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Game.luau"
+              },
+              "Home": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Home.luau"
+              },
+              "Logs": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Logs.luau"
+              },
+              "Moderation": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Moderation.luau"
+              },
+              "Players": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Players.luau"
+              },
+              "Profile": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Profile.luau"
+              },
+              "Security": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Security.luau"
+              },
+              "Sentinel": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Sentinel.luau"
+              },
+              "Settings": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Settings.luau"
+              }
+            },
+            "Remotes": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Remotes.luau"
+            },
+            "Shell": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Shell.luau"
+            },
+            "Tools": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "ESP": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/ESP.luau"
+              },
+              "Fly": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/Fly.luau"
+              },
+              "Noclip": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/Noclip.luau"
+              },
+              "Spectator": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/Spectator.luau"
+              }
+            },
+            "UI": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/UI.luau"
+            }
+          },
+          "Recovery": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/StarterPlayer/StarterPlayerScripts/Recovery.luau",
+            "$properties": {
+              "Disabled": false
+            }
+          },
+          "APM_Notices": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Notices.luau",
+            "$properties": {
+              "Disabled": false
+            }
+          }
+        },
+        "Bootstrap": {
+          "$ignoreUnknownInstances": true,
+          "$path": "Bootstrap.luau"
+        },
+        "Release": {
+          "$ignoreUnknownInstances": true,
+          "$path": "Release.luau"
+        },
+        "Migrations": {
+          "$ignoreUnknownInstances": true,
+          "$path": "Migrations.luau"
+        },
+        "LICENSE": {
+          "$ignoreUnknownInstances": true,
+          "$className": "StringValue",
+          "$properties": {
+            "Value": "MIT License\n\nCopyright (c) 2026 APM contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+          }
+        }
+      },
+      "APM_Extensions": {
+        "$ignoreUnknownInstances": true,
+        "$className": "Folder",
+        "$attributes": {
+          "APMExtensionsSchema": {
+            "Float64": 1
+          }
+        },
+        "Config": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder",
+          "ServerSettings": {
+            "$ignoreUnknownInstances": true,
+            "$path": "extensions/ServerSettings.luau"
+          },
+          "SharedConfig": {
+            "$ignoreUnknownInstances": true,
+            "$path": "extensions/SharedConfig.luau"
+          }
+        },
+        "Commands": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder"
+        },
+        "Adapters": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder"
+        },
+        "Server": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder"
+        },
+        "ClientPages": {
+          "$ignoreUnknownInstances": true,
+          "$className": "Folder"
+        }
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$ignoreUnknownInstances": true,
+      "APM_Bootstrap": {
+        "$ignoreUnknownInstances": true,
+        "$path": "installation/APM_Bootstrap.server.luau",
+        "$attributes": {
+          "APMBootstrapApi": {
+            "Float64": 1
+          },
+          "AllowExperimental": {
+            "Bool": true
+          }
+        },
+        "$properties": {
+          "Disabled": true
+        }
+      }
+    }
+  }
+}
