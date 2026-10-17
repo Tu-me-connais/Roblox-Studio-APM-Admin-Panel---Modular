@@ -1,0 +1,3548 @@
+{
+  "schemaVersion": 1,
+  "version": "2.10.2",
+  "root": "Workspace.APM_DistributionKits.APM_Kit",
+  "nodes": [
+    {
+      "path": [],
+      "attributes": {
+        "APMVersion": "2.10.2",
+        "APM_Kit": true,
+        "APMToolboxApi": 1,
+        "APMDistributionSchema": 3,
+        "AllowExperimental": false,
+        "APMLicense": "MIT"
+      },
+      "tags": [],
+      "class": "Model",
+      "archivable": true
+    },
+    {
+      "enabled": false,
+      "path": [
+        "Installer"
+      ],
+      "tags": [],
+      "class": "Script",
+      "attributes": [],
+      "runContext": "Legacy",
+      "bytes": 2674,
+      "originalBytes": 2674,
+      "archivable": true,
+      "sourceFile": "src/APM_Kit/Installer.server.luau",
+      "sourceSha256": "9a9cf7bd4b739d4cf51534ab5925ffd60bc9b573b4dd8cc5797f8597f4e72924"
+    },
+    {
+      "enabled": false,
+      "path": [
+        "APM_Bootstrap"
+      ],
+      "tags": [],
+      "class": "Script",
+      "attributes": {
+        "AllowExperimental": true,
+        "APMBootstrapApi": 1
+      },
+      "runContext": "Legacy",
+      "bytes": 1229,
+      "originalBytes": 1229,
+      "archivable": true,
+      "sourceFile": "src/APM_Kit/APM_Bootstrap.server.luau",
+      "sourceSha256": "7be2298c8ae29cc2c41e499c381074d0130094b40551d1a3d91306848d79404f"
+    },
+    {
+      "path": [
+        "APM_Extensions"
+      ],
+      "attributes": {
+        "APMExtensionsSchema": 1,
+        "APMComponentId": "APM_Extensions"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Extensions",
+        "Config"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.Config"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 4421,
+      "path": [
+        "APM_Extensions",
+        "Config",
+        "ServerSettings"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.Config.ServerSettings"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 4421,
+      "sourceFile": "src/APM_Kit/APM_Extensions/Config/ServerSettings.luau",
+      "sourceSha256": "f1c21f34598207f6138cb7d1c8fcdae9adb8bc05cdd434e716b82f8a6999f81e"
+    },
+    {
+      "bytes": 1033,
+      "path": [
+        "APM_Extensions",
+        "Config",
+        "SharedConfig"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.Config.SharedConfig"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1033,
+      "sourceFile": "src/APM_Kit/APM_Extensions/Config/SharedConfig.luau",
+      "sourceSha256": "cfd2de799b849a1643f145f7890a061aeedaf70f4a985a6d47d5346b631988c4"
+    },
+    {
+      "path": [
+        "APM_Extensions",
+        "Commands"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.Commands"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Extensions",
+        "Adapters"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.Adapters"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Extensions",
+        "Server"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.Server"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Extensions",
+        "ClientPages"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Extensions.ClientPages"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "INSTALLATION"
+      ],
+      "attributes": [],
+      "tags": [],
+      "value": "📖 Guide complet / Full guide — 7 langues / languages : APM_Kit > READ ME!!!\nCommence par / Start with « 0 - Langue · Language ».\n\nAPM | Admin Panel - Modular — 2.10.2 (stable) · MIT · Gratuit / Free\n\nFRANÇAIS\n\nTOOLBOX : insère APM_Kit dans Workspace ou ServerScriptService, configure les comptes autorisés, puis lance Play.\nToolboxBootstrap reste activé, avec RunContext Server. Il range le kit dans ServerStorage et poursuit le lancement avec un chargeur privé dans ServerScriptService.\nServerStorage seul ne lance pas les scripts. Installer et APM_Bootstrap restent désactivés : ils servent à l'installation manuelle alternative.\n\nCONFIGURATION ACTIVE : APM_Kit.APM_Extensions.Config.ServerSettings et SharedConfig.\nSi une configuration externe compatible ServerStorage.APM_Extensions existe, elle est conservée et prioritaire : modifie alors ses fichiers Config.\nHome et Diagnostics indiquent la configuration active. Déclare explicitement tes comptes fixes dans Settings.Users du ServerSettings actif, avec leur UserId et le grade choisi.\nLa configuration livrée n'accorde aucun grade automatiquement. Les grades et permissions enregistrés par le panneau restent pris en compte.\nLes GUI et remotes administratifs sont envoyés uniquement aux comptes autorisés ; chaque action est revalidée côté serveur.\n\nOUVERTURE : le bouton APM ou F2 ouvre le panneau ; Z le recentre. Home permet de masquer le bouton et de choisir la touche.\nLe bouton vérifie 16 repères autour de l'écran ; si tous sont occupés, il se superpose en bas à gauche.\nUn registre serveur élit un chargeur ; les copies reconnues du kit, du Core et des composants sont désactivées et rangées en privé.\n\nFONCTIONS : Funny propose un aperçu 3D muet, des décors et des transformations temporaires, avec portées Local, Serveur et Interserveurs, permissions, limites et restauration automatique.\nHome affiche l'identité et l'état du serveur, les performances selon les droits, la recherche et les détails des joueurs connectés ; il actualise ses relevés toutes les 15 s lorsqu'il est visible.\nLes statistiques couvrent l'utilisation du panneau, les joueurs, les performances serveur et les DataStores suivis. Ces relevés restent en mémoire ; APM.TrackDataStore(store, \"Nom\") ajoute les DataStores du jeu.\nConserve tes personnalisations hors Core. L'APM ne télécharge aucun code, ne modifie pas la Source des scripts pendant le jeu et ne publie rien automatiquement.\n\nLANGUES : fr, en, es, pt, de, ru (русский), zh (中文 simplifié).\nLes traductions sont regroupées dans APM_Core > Shared > Lang > Tabs ; les modules par langue et Phrases permettent les compléments et remplacements.\n\nENGLISH\n\nTOOLBOX: insert APM_Kit into Workspace or ServerScriptService, configure the authorized accounts, then start Play.\nKeep ToolboxBootstrap enabled, with RunContext Server. It moves the kit into ServerStorage and continues startup through a private loader in ServerScriptService.\nServerStorage alone does not run scripts. Keep Installer and APM_Bootstrap disabled: they are for the alternative manual installation.\n\nACTIVE CONFIGURATION: APM_Kit.APM_Extensions.Config.ServerSettings and SharedConfig.\nIf a compatible external ServerStorage.APM_Extensions configuration exists, it is preserved and takes priority: edit its Config files instead.\nHome and Diagnostics show the active configuration. Explicitly declare fixed accounts in Settings.Users in the active ServerSettings, using their UserId and chosen rank.\nThe supplied configuration grants no rank automatically. Ranks and permissions saved through the panel still apply.\nAdministrative GUIs and remotes are sent only to authorized accounts; the server validates every action again.\n\nOPENING: the APM button or F2 opens the panel; Z centers it. Home lets you hide the button and choose the key.\nThe button checks 16 positions around the screen; if all are occupied, it overlays the bottom-left corner.\nA server registry elects one loader; recognized duplicate kits, Cores and components are disabled and stored privately.\n\nFEATURES: Funny provides a silent 3D preview, scenes and temporary transformations, with Local, Server and CrossServer scopes, permissions, limits and automatic restoration.\nHome shows server identity and status, performance according to permissions, and search and details for connected players; it refreshes readings every 15 seconds while visible.\nStatistics cover panel usage, players, server performance and tracked DataStores. These readings stay in memory; APM.TrackDataStore(store, \"Name\") adds game DataStores.\nKeep customizations outside Core. APM does not download code, change script Source during gameplay or publish automatically.\n\nLANGUAGES: fr, en, es, pt, de, ru (русский), zh (simplified Chinese / 简体中文).\nTranslations are grouped under APM_Core > Shared > Lang > Tabs; language modules and Phrases support additions and overrides.\n\n\nNOUVEAU 2.10.2 / NEW 2.10.2 : Sentinel (assistant de commandes flottant / floating command assistant) + onglet / tab Sentinel Helper. Voir / see APM_Kit > READ ME!!! > « Sentinel ».",
+      "class": "StringValue",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Core"
+      ],
+      "attributes": {
+        "APMVersion": "2.10.2",
+        "APMChannel": "stable",
+        "APMCore": true,
+        "APMLicense": "MIT",
+        "APMInstallationSchema": 3,
+        "APMComponentId": "APM_Core"
+      },
+      "tags": [],
+      "class": "Model",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Server"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 8154,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Settings"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Settings"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 8150,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Settings.luau",
+      "sourceSha256": "b8428b9cb81e3929e8e462bd41e4fd812dd9a6d54f2b7acb63cb4b7f4ad7bb0b"
+    },
+    {
+      "bytes": 33447,
+      "path": [
+        "APM_Core",
+        "Server",
+        "APMService"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.APMService"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 33447,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/APMService.luau",
+      "sourceSha256": "ad5068b67923e6985439fd942b9a17478d0f3fdd70a99c0ca59bc47c7fb0194d"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 1036,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Kick"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Kick"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1036,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Kick.luau",
+      "sourceSha256": "0998c85e736ab51b0a5cb9e03eec375eddc48e90eab42648ba819fa445fb0826"
+    },
+    {
+      "bytes": 1085,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Ban"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Ban"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1085,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Ban.luau",
+      "sourceSha256": "62e19c7b2435471749a5154841c305e9f5939d2e7cd4fd01d78089989965e4f9"
+    },
+    {
+      "bytes": 662,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Unban"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Unban"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 662,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Unban.luau",
+      "sourceSha256": "004c5c2dc8c5e2ad824f55aa14be7212f30762b1e24e0f811e43bb9edeefabd1"
+    },
+    {
+      "bytes": 544,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Kill"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Kill"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 544,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Kill.luau",
+      "sourceSha256": "cfc1e201ac213f6cb12dda22dbf5fd926c493de49f5f5de1e9c2755447ffb330"
+    },
+    {
+      "bytes": 3463,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Freeze"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Freeze"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3463,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Freeze.luau",
+      "sourceSha256": "a98466e88f05cb75877715442dd47ddbea85272c179f6e1ab8d471a13fca12ea"
+    },
+    {
+      "bytes": 3173,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Mute"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Mute"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3173,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Mute.luau",
+      "sourceSha256": "36769dd97c25fbef1bc17df134ec03d6b16d2eb932833d320717bab4b5bc9958"
+    },
+    {
+      "bytes": 4321,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Warn"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Warn"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 4321,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Warn.luau",
+      "sourceSha256": "5c0ff437b2db3f2ec1a7e6f543075f95c4f9dba44eda9f912c159f79216402d8"
+    },
+    {
+      "bytes": 540,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Heal"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Heal"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 540,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Heal.luau",
+      "sourceSha256": "24cdcf7ed0d1485a19dd0b15c2ced8b5942b27ed9f5a09e2715125c685abbe54"
+    },
+    {
+      "bytes": 385,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Respawn"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Respawn"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 385,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Respawn.luau",
+      "sourceSha256": "cdb69945ef40e903eed90a14e24ba38fe29bda0c50fc825ed2f903b121a32fae"
+    },
+    {
+      "bytes": 842,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Teleport"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Teleport"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 842,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Teleport.luau",
+      "sourceSha256": "282595cb1644ad55b39cbc370a459962642801ee0998826fae4cb089b1dc9143"
+    },
+    {
+      "bytes": 1212,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Bring"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Bring"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1212,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Bring.luau",
+      "sourceSha256": "4fbd2895e6c52a95f8e473e714646cd79ce95a503e3aae893f615717739263e1"
+    },
+    {
+      "bytes": 789,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Return"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Return"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 789,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Return.luau",
+      "sourceSha256": "07d6debb733933286b8b639ea3716fc98059e925a56c268fedbf3ac23d661b95"
+    },
+    {
+      "bytes": 1888,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "ToSpawn"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.ToSpawn"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1888,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/ToSpawn.luau",
+      "sourceSha256": "74c84a74532e7a73ec4b661ddab8e47bb83ade53f203998cd4b1b1bd50cc0253"
+    },
+    {
+      "bytes": 3843,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Invisible"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Invisible"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3843,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Invisible.luau",
+      "sourceSha256": "2e96b1902c733511a448ee2b23bd0ca8dda5278a9a26530730604eccd6ad0d79"
+    },
+    {
+      "bytes": 1894,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Godmode"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Godmode"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1894,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Godmode.luau",
+      "sourceSha256": "c3d172b00b3fb569f673dac61817e48d2b93a16846261a08e653550810e79b37"
+    },
+    {
+      "bytes": 2095,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Speed"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Speed"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2095,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Speed.luau",
+      "sourceSha256": "55dc9d7db429be222731ce157b21d5abe1af90ae05b3a14c8075100d1192bf26"
+    },
+    {
+      "bytes": 2297,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "JumpPower"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.JumpPower"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2297,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/JumpPower.luau",
+      "sourceSha256": "f2029cb2d952b4bf31d43ce858d5dfd9579464bc4da008496bf84ab1886b28ba"
+    },
+    {
+      "bytes": 2187,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Leaderstats"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Leaderstats"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2187,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Leaderstats.luau",
+      "sourceSha256": "6fcce90c4a73f2f7b47df8a2eaabf8a0bfa398e614c2e15cd7de9eb544fd467d"
+    },
+    {
+      "bytes": 1983,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "GiveTool"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.GiveTool"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1983,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/GiveTool.luau",
+      "sourceSha256": "7efcdaad734bc8323afccaf3208f2a850f1830961b9a42a2bfd8221245cfa357"
+    },
+    {
+      "bytes": 505,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "TimeOfDay"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.TimeOfDay"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 505,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/TimeOfDay.luau",
+      "sourceSha256": "787eba2d664fca32e2e3ab00da26ed1b5a886b438dd8a3d8fb1f18352c2604c9"
+    },
+    {
+      "bytes": 1268,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Modules",
+        "Shutdown"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Modules.Shutdown"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1268,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Modules/Shutdown.luau",
+      "sourceSha256": "bc9d944f8b14fb09f0cbd6749da945ac8bc65be4866b73602f723b7a291cc51c"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 839,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Guard"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Guard"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 839,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Guard.luau",
+      "sourceSha256": "2b5ff4983dea1119f8cd79fa693f33f9f5155117ea8f19b5367cd60dc5e75ba2"
+    },
+    {
+      "bytes": 1406,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "TextFilter"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.TextFilter"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1406,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/TextFilter.luau",
+      "sourceSha256": "650c03d5071a8f8e925c7373518555c1955a7000f83167acd14e2eb911b2a281"
+    },
+    {
+      "bytes": 5367,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Ranks"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5367,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks.luau",
+      "sourceSha256": "8b1b8e89a236a94725287b9631284d15e62bd40f1593ac33cdf2ae78343d08b4"
+    },
+    {
+      "bytes": 2830,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Storage"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2830,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Storage.luau",
+      "sourceSha256": "15da03787d65f7add907d9dca1c1b7e8b23de7fed885d2fd12193aab7b654f83"
+    },
+    {
+      "bytes": 3190,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Assignments"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3190,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Assignments.luau",
+      "sourceSha256": "ac16ced9c2941702323967a66784270eb3c6f59acd3054437b60260e76ec456e"
+    },
+    {
+      "bytes": 8777,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Access"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 8777,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Access.luau",
+      "sourceSha256": "2c24016fb1982341cf8b8fcb556d8a37370838075c89461fd2961557ae9baa1f"
+    },
+    {
+      "bytes": 7711,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Identity"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 7711,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Identity.luau",
+      "sourceSha256": "aef806fea131dd0e1b4daeed0294ba10ab93c3fd01f242e88ddccc9eadf57a09"
+    },
+    {
+      "bytes": 8868,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Authority"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 8868,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Authority.luau",
+      "sourceSha256": "a9c5d3ce0ad8fcbee8035135b27d6d62df80e82629bde67ce21e694ea3451825"
+    },
+    {
+      "bytes": 4659,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Simulation"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 4659,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Simulation.luau",
+      "sourceSha256": "4b6fcaf1c473ab15b967e89c02ff3b4c2ff0b31f4f77060c6778eb9877f1bddf"
+    },
+    {
+      "bytes": 7494,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Resolution"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 7494,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Resolution.luau",
+      "sourceSha256": "16de63431365dd6377dd2a1b5d5ef0e69a273b10b4d5c54c023ba0ad1b9b7bbc"
+    },
+    {
+      "bytes": 3124,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Ranks",
+        "Sync"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3124,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Ranks/Sync.luau",
+      "sourceSha256": "592d0e0ffc6557edfc6b0d12d510a3e997a9ea38352403d47a4e0e656f044b33"
+    },
+    {
+      "bytes": 6722,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Journal"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Journal"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 6722,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Journal.luau",
+      "sourceSha256": "ac2dff0054410089dd0b5a31b142e93ea66ea6109d4cdc632602af270f267eb3"
+    },
+    {
+      "bytes": 6621,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Roster"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Roster"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 6621,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Roster.luau",
+      "sourceSha256": "3e397ba70009c3bce0dab74c1a47163a08a8d4f1215a4b4b47db33614a3b4ce7"
+    },
+    {
+      "bytes": 15367,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Controls"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Controls"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 15367,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Controls.luau",
+      "sourceSha256": "91e7c96488f6c8a42d5955d3f610932665065b6196d48e42618a253ab5fbf838"
+    },
+    {
+      "bytes": 11346,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Grades"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Grades"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 11346,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Grades.luau",
+      "sourceSha256": "b3fad199c543091a1af97529ac75ecaf638472a4ccd59a7e7abe97217c5dfeee"
+    },
+    {
+      "bytes": 3683,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Profiles"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Profiles"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3683,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Profiles.luau",
+      "sourceSha256": "d3fbae743194d1654b37941ee379cf24c952002f838815e81971a32e272c5c5e"
+    },
+    {
+      "bytes": 20110,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "AutoBridge"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.AutoBridge"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 20110,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/AutoBridge.luau",
+      "sourceSha256": "822b9182b9c365d6004636a69b129755830ddd0d914a4cbdef91131d9ff5fc30"
+    },
+    {
+      "bytes": 10425,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Preferences"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Preferences"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 10425,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Preferences.luau",
+      "sourceSha256": "7792ddc3d9f751072123cb4ac3f653aa277d3d3c943780e3d7921548bbf50b78"
+    },
+    {
+      "bytes": 55341,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Sentinel"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Sentinel"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 55341,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Sentinel.luau",
+      "sourceSha256": "cfa3b34e8ca903cc06fc1766a320c24df06fa524126a631561233e552d995e79"
+    },
+    {
+      "bytes": 14973,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Sessions"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Sessions"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 14973,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Sessions.luau",
+      "sourceSha256": "1991af423fba066b09ca6d2c281a5d2d666a712cc9b7d478b388fd4aa75f5de4"
+    },
+    {
+      "bytes": 4748,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Simulation"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Simulation"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 4748,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Simulation.luau",
+      "sourceSha256": "657e2ae7d7ad3e4653aa91924effc8e1a041328045b9d5ca91fa3d1709878134"
+    },
+    {
+      "bytes": 5376,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "SuiteConfig"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.SuiteConfig"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5376,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/SuiteConfig.luau",
+      "sourceSha256": "9c5a847598e591cdc7df2eb50a443f757cd68738849600831531a9b45fb2a28b"
+    },
+    {
+      "bytes": 25091,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Extensions"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Extensions"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 25091,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Extensions.luau",
+      "sourceSha256": "b9fd0c876c4e500b8b4947be967868fac1a044693e96117f59e2b4673b4fd4d2"
+    },
+    {
+      "bytes": 309,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Version"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Version"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 309,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Version.luau",
+      "sourceSha256": "214977d4e35d2583c884f58d4aeac8ab4049d1b496926fc8800036ad98bcb016"
+    },
+    {
+      "bytes": 832,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "SourceScope"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.SourceScope"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 832,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/SourceScope.luau",
+      "sourceSha256": "a3c32980b7dfc54decf1d2d8921ee210e986db0ff32748450e21a3d2cf02e68a"
+    },
+    {
+      "bytes": 11110,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "HomeTelemetry"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.HomeTelemetry"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 11110,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/HomeTelemetry.luau",
+      "sourceSha256": "7b620702eaf10ce7687af90aa46c746a3b0c914f80753aa6c78402830f59edeb"
+    },
+    {
+      "bytes": 2665,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Funny"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Funny"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2665,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Funny.luau",
+      "sourceSha256": "ffadee13d62b92bf73f01790eb7f959d78c38a9b3ce834b00b6120339f902153"
+    },
+    {
+      "bytes": 8658,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Funny",
+        "Catalog"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 8658,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Funny/Catalog.luau",
+      "sourceSha256": "bcb4529cb742144f37474ea0f285e0a6c4ba7f5e27983c175e9208acdca8153b"
+    },
+    {
+      "bytes": 23445,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Funny",
+        "Scenes"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 23445,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Funny/Scenes.luau",
+      "sourceSha256": "7851bcd31756a8119453caa2d7c451d72c079f4b9f6be34b3e0f470c1d41e78a"
+    },
+    {
+      "bytes": 13634,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Funny",
+        "Transforms"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 13634,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Funny/Transforms.luau",
+      "sourceSha256": "997f0132ea24b372ad849da365b61c51b9a65338403801275c9a8eed0841e97c"
+    },
+    {
+      "bytes": 12426,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Funny",
+        "Network"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 12426,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Funny/Network.luau",
+      "sourceSha256": "5049f597b05cd15c3da08d15b7e8bc9f6d231c9a77b91b2227daadbabfe955d6"
+    },
+    {
+      "bytes": 12345,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Statistics"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 12345,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Statistics.luau",
+      "sourceSha256": "20c530fc265c0f440f1aece5a58d2ccebc46d5ca3775d7132dfa658fc88a468a"
+    },
+    {
+      "bytes": 6938,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "InstallationGuard"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.InstallationGuard"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 6938,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/InstallationGuard.luau",
+      "sourceSha256": "935859330b7834604a8747cf70b3d36b0bb9767fcf82af6debe6bd6c57606cc3"
+    },
+    {
+      "bytes": 16139,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Features"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Features"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 16139,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Features.luau",
+      "sourceSha256": "adbc190ffaa0d7e201e8813c13bebf982b22d5868d5d28c8676d4a050934d04c"
+    },
+    {
+      "bytes": 10693,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Announcements"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.Announcements"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 10693,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Announcements.luau",
+      "sourceSha256": "02400eda7fbafbf749c941828e5115f7d8e1c9a7189fe5f6a55869a75ba188e1"
+    },
+    {
+      "bytes": 18292,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "SentinelStore"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Server.Core.SentinelStore"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 18292,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/SentinelStore.luau",
+      "sourceSha256": "837b43cd7758767c74aca0e8cdb91b0b0eab55cd67d9ea701fc35d7c044cf419"
+    },
+    {
+      "bytes": 57924,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 57924,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant.luau",
+      "sourceSha256": "b303db736267fcb7e779319d442534d1b85c45f901f3a64be2d1c9a23a9fe372"
+    },
+    {
+      "bytes": 14756,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "Parser"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 14756,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/Parser.luau",
+      "sourceSha256": "c2144d3f246d9214f7b0b851dca6752e1eb2303e023e66b923ebf00360996e27"
+    },
+    {
+      "bytes": 18173,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "Catalog"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 18173,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/Catalog.luau",
+      "sourceSha256": "2fa9a21e658e080e530912e8011e76b19cfb973114ecc982fbd976dee0975a0e"
+    },
+    {
+      "bytes": 5348,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "Actions"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5348,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/Actions.luau",
+      "sourceSha256": "5ac7514d0ec7250621db4caf1cb3e891652258e9a3068d4c87157212c28fc4a5"
+    },
+    {
+      "bytes": 11956,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "Config"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 11956,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/Config.luau",
+      "sourceSha256": "8fe3d83dd95826f9fe5f1fea709ffd7bba04e80387472b29cc2363da1404607e"
+    },
+    {
+      "bytes": 10414,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "External"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 10414,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/External.luau",
+      "sourceSha256": "9845b0e39e72aeada6d2d2476d31e5fdf5efa9663b60fd54182d74cfed751dcc"
+    },
+    {
+      "bytes": 6281,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "Unicode"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 6281,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/Unicode.luau",
+      "sourceSha256": "070ecb48dde6615019b8047507c7759def44dd31f72d9470f89041edb861ed54"
+    },
+    {
+      "bytes": 16258,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 16258,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization.luau",
+      "sourceSha256": "d2287e4c2dcaa66fc4741297d7a977bcad1ec0abed693c36ff46a2575a0c361b"
+    },
+    {
+      "bytes": 2777,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "fr"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2777,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/fr.luau",
+      "sourceSha256": "725652be34acb946c49972e40bdc7016ea7153e65bec42d4f4ed1e0937498be9"
+    },
+    {
+      "bytes": 2357,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "en"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2357,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/en.luau",
+      "sourceSha256": "914890f2ce5c81f42201c0455c4f29a4ff1175778749f0fe0f02336b6b6483cd"
+    },
+    {
+      "bytes": 2532,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "es"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2532,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/es.luau",
+      "sourceSha256": "59d37cb95c9ed4860ea0142922949802cef00bd62997700689c1622da3584c61"
+    },
+    {
+      "bytes": 2441,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "pt"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2441,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/pt.luau",
+      "sourceSha256": "4ae7bf59ca5523aa4d87a3013cc4972d23f3008c27637fcf6bee0f52cc182704"
+    },
+    {
+      "bytes": 2587,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "de"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2587,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/de.luau",
+      "sourceSha256": "4e0b1e610747c3e2c0290d3090d65ef5f4b90986acf85108e0049a0c468d91d6"
+    },
+    {
+      "bytes": 3537,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "ru"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3537,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/ru.luau",
+      "sourceSha256": "f7f942d2644170282c466d2f2cf57bddad0a7c662cb02e7758ea894b4ea3de1e"
+    },
+    {
+      "bytes": 2921,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Assistant",
+        "CommandLocalization",
+        "zh"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2921,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/zh.luau",
+      "sourceSha256": "4c71d0c90be7c33fe160fa892572e48f2df22b9438b6d0adaa064bd42077aeac"
+    },
+    {
+      "bytes": 28310,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Dispatcher"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 28310,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Dispatcher.luau",
+      "sourceSha256": "1832fd1130f45e5b70ecd21293c495ccf7957c4a0a19684567df7b7c3fe75297"
+    },
+    {
+      "bytes": 2795,
+      "path": [
+        "APM_Core",
+        "Server",
+        "Core",
+        "Dispatcher",
+        "Hooks"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2795,
+      "sourceFile": "src/APM_Kit/APM_Core/Server/Core/Dispatcher/Hooks.luau",
+      "sourceSha256": "dbc57ca828ae50633763bd77e432f2c169adc9b06910de21270a64d5baf400e9"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Shared"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 3258,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Config"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Config"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3258,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Config.luau",
+      "sourceSha256": "8e71300330c1c90b53be932728828f26c7075a92009b8fecff026175c5f471a1"
+    },
+    {
+      "bytes": 4104,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Remotes"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Remotes"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 4104,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Remotes.luau",
+      "sourceSha256": "084f72d50d78ad10a7ef2484ba4b2aabb139e5e89055095269ae4cb5d811423c"
+    },
+    {
+      "bytes": 11399,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Lang"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 11399,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang.luau",
+      "sourceSha256": "a5114251794fbc39e2bfa846c00d08d2af45ba85460aeba1ec5e8f60786510fb"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "en"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Lang.en"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/en.luau",
+      "sourceSha256": "d2d797937102c8a7a820a1aea72b5fa5facbf191e380d2ebf7f90c3c2ad5f245"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "fr"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Lang.fr"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/fr.luau",
+      "sourceSha256": "a188132144cd9d785683c4e93f301f3dba901f481712f68223577eb009713929"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "es"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Lang.es"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/es.luau",
+      "sourceSha256": "6b70386ea62ff922a49c166062cfaec6e720f965f82a16b069ff7eb53beebaf3"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "pt"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Lang.pt"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/pt.luau",
+      "sourceSha256": "72f678ca1a5f9de7ffc5b72a2ed41362aed734de65cce96298b854d352946595"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "de"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Lang.de"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/de.luau",
+      "sourceSha256": "0c55a3d2f900b5207fca8c3c64d26f08efccb618bdaa21f3b298ed7ef38338c4"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Phrases"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 244,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Phrases",
+        "es"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 244,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/es.luau",
+      "sourceSha256": "a65214d60a8fb637e9f4c0bbc2a5688c4a7b3ecd59cdd833ca7111f018b15416"
+    },
+    {
+      "bytes": 244,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Phrases",
+        "pt"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 244,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/pt.luau",
+      "sourceSha256": "82827ea8c6ffc4026105102f87d422d622ef3df6f0dc0cc718cc67fdaea041be"
+    },
+    {
+      "bytes": 244,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Phrases",
+        "de"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 244,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/de.luau",
+      "sourceSha256": "1d57dea5930f2bf33626c13feaa29d5c4fded0124842409297ad8efc25b5864a"
+    },
+    {
+      "bytes": 244,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Phrases",
+        "ru"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 244,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/ru.luau",
+      "sourceSha256": "4beef9f906d60b03ff7f81e57ef21d78a20c29b4411984f62bca2558bdb0a635"
+    },
+    {
+      "bytes": 244,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Phrases",
+        "zh"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 244,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/zh.luau",
+      "sourceSha256": "1a1470665c6e8ef613c67e5fb5d3bd4dd6175701df15799808a9b7742b67ab0e"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "ru"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/ru.luau",
+      "sourceSha256": "3167f217669e6885240dae9939ddc65db3b2eb02da9ce3ec200d409133524387"
+    },
+    {
+      "bytes": 188,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "zh"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 188,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/zh.luau",
+      "sourceSha256": "7e5da1f8696202e64230145fec0656563a2df942c89b23d208010a49641ea435"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 3972,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Bans"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3972,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Bans.luau",
+      "sourceSha256": "a419723fc04df8445f0f17b9f03ef5f87fc8cb5995acc68bbaae3f62d3728d48"
+    },
+    {
+      "bytes": 72248,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Common"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 72248,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Common.luau",
+      "sourceSha256": "7b4541dc1f72010eaa7c896c406e80d283294f0874bebdaf6138c276f7119e64"
+    },
+    {
+      "bytes": 73013,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Diagnostics"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 73013,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Diagnostics.luau",
+      "sourceSha256": "819240521cd78bd7bc4d04791220503fd296a742d3b0108598997e0945690f86"
+    },
+    {
+      "bytes": 78191,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Funny"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 78191,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Funny.luau",
+      "sourceSha256": "420d763d253178322e2931c58a37d3eb9bb095948ebe41a992ec01af74de388b"
+    },
+    {
+      "bytes": 12539,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Game"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 12539,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Game.luau",
+      "sourceSha256": "7e2542e8d2dd8cfd1671ab31edcd25df5ac1c95f69e451441651fac32ff10ee8"
+    },
+    {
+      "bytes": 62749,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Home"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 62749,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Home.luau",
+      "sourceSha256": "d80ee75826d5bd8a864317b5e3cfdd83bb562bce80a3c57e7ac68a515db57457"
+    },
+    {
+      "bytes": 9440,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Logs"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 9440,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Logs.luau",
+      "sourceSha256": "bbb9050b385450f2699201f284b4a0a0a5333ed3767559bb7075f72db98953e5"
+    },
+    {
+      "bytes": 53749,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Moderation"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 53749,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Moderation.luau",
+      "sourceSha256": "e43600b2c2fb4f4419ae8528a1784a6f2a9fc018fe1ec8b56f73dfef5fcc9fda"
+    },
+    {
+      "bytes": 27437,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Players"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 27437,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Players.luau",
+      "sourceSha256": "88b95ed92de2b9d240e558171c50a571c3dc30af58611ae2e9d2a5a680986d7d"
+    },
+    {
+      "bytes": 7229,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Profile"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 7229,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Profile.luau",
+      "sourceSha256": "55db5a478c15cd0d1f97c49303e65ce8f7f53313a69dcdc80877e0486ef821a4"
+    },
+    {
+      "bytes": 24394,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Security"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 24394,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Security.luau",
+      "sourceSha256": "a1d179fc0386e053725ff0dea7e0f69a1f7472e42672c3d42b31bdf16fd158de"
+    },
+    {
+      "bytes": 157681,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Sentinel"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 157681,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Sentinel.luau",
+      "sourceSha256": "3c36c03e45fd836c71682dc379aa36ab164f2c8820220d464f2ad2acb3b1e996"
+    },
+    {
+      "bytes": 49507,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Settings"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 49507,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Settings.luau",
+      "sourceSha256": "71b9eacd0e6a7d680dcc07c7a4dae9fcc46b94cd82eb2eb97368f73bd002f79a"
+    },
+    {
+      "bytes": 25553,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Shell"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 25553,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Shell.luau",
+      "sourceSha256": "7721104c824806d3b501281be435163cefbb48db888959ff531978dbda4ee491"
+    },
+    {
+      "bytes": 21014,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Stats"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 21014,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Stats.luau",
+      "sourceSha256": "77aed785848882c96f9b0cae356d084b2e9e7d5ff9bbfb9a71467712de12e3f9"
+    },
+    {
+      "bytes": 102360,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "SentinelAssistant"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 102360,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/SentinelAssistant.luau",
+      "sourceSha256": "f3dc815f69276e3ab9b3368869b0dd29ff9e0116eb57883a484e42b9fbbecdff"
+    },
+    {
+      "bytes": 13077,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Lang",
+        "Tabs",
+        "Dispatch"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 13077,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Dispatch.luau",
+      "sourceSha256": "478a362fea5c50c9c593082a96d65dc957e1aa9815b49009545f7148433667bd"
+    },
+    {
+      "bytes": 1044,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Configuration"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Configuration"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1044,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Configuration.luau",
+      "sourceSha256": "c62f0a54eb75628355ac6978b4a9c23f7da2024ebd9b259f189f68140ce2f92f"
+    },
+    {
+      "bytes": 13935,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.FunnyVisuals"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 13935,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals.luau",
+      "sourceSha256": "847f44c53e0cc8f2b62cf86ac24e99507d26e2038195104386bb5d4f6830cb95"
+    },
+    {
+      "bytes": 947,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Common"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 947,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Common.luau",
+      "sourceSha256": "d5622d8218c9a1dcbba94e9cb0a2f9e6cc7f4bd8096dba384e811707e61f1c97"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 2292,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Confetti"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2292,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Confetti.luau",
+      "sourceSha256": "b99327259875eacf5f8392f1ca6c5ada07c7154f9cb76473493c97e6485a27ae"
+    },
+    {
+      "bytes": 2732,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Ducks"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2732,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Ducks.luau",
+      "sourceSha256": "79f6b470034bafe60e3d085a54385f71524d06cd97c50fe8db59c55f4b13278d"
+    },
+    {
+      "bytes": 1857,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Bubbles"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1857,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Bubbles.luau",
+      "sourceSha256": "ecee7c78accf86f8d5430cc21e25fb9e45a4b7df193f78f34809e9ad23af9c1f"
+    },
+    {
+      "bytes": 3241,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Potato"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3241,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Potato.luau",
+      "sourceSha256": "73a803767f926ac41d0fb07a49156784b3403a7a68e507f63a413eccfef244ed"
+    },
+    {
+      "bytes": 2717,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Solar"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2717,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Solar.luau",
+      "sourceSha256": "d622a36449ee595be6e03302b9cf9bc3f2b02a5f27be7a5f5c3933b7ea96234b"
+    },
+    {
+      "bytes": 7793,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Disco"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 7793,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Disco.luau",
+      "sourceSha256": "d9a1c9f847304fdfed36403e1a7d5447380ad91a25e070f15fa6f03ad558bcdf"
+    },
+    {
+      "bytes": 1805,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Snow"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1805,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Snow.luau",
+      "sourceSha256": "bcec16a346cb9f730bf78b649b756d793fd077f54280ae98c44c180566fca75b"
+    },
+    {
+      "bytes": 2548,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Hearts"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2548,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Hearts.luau",
+      "sourceSha256": "c20f3cc2890f76f9e1cc12c55f48510557ae83e7027325dfbfdfaea62cfeed59"
+    },
+    {
+      "bytes": 2531,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Fireworks"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2531,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Fireworks.luau",
+      "sourceSha256": "002f6714fe0731b88b529495911f1f51137785e4bb3f03f9c286e03aa6a2d559"
+    },
+    {
+      "bytes": 2943,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "FunnyVisuals",
+        "Scenes",
+        "Rainbow"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2943,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Rainbow.luau",
+      "sourceSha256": "6e327491ca15c7f4f761a93f95503dee8fa24114d5c86eb7a2c96c61b0a7f351"
+    },
+    {
+      "bytes": 21081,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "Announcements"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Shared.Announcements"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 21081,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/Announcements.luau",
+      "sourceSha256": "305fc0a1881c6c338ceeb24b7d56db800c87089407a5bb222d1c397719946b46"
+    },
+    {
+      "bytes": 5767,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "ActionCatalog"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5767,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/ActionCatalog.luau",
+      "sourceSha256": "7cc9c75c97944fbc320c44e9134b00b8de034f47bcaa34d229965d724d68e2e9"
+    },
+    {
+      "bytes": 12637,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "ActionExecutor"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 12637,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/ActionExecutor.luau",
+      "sourceSha256": "d54de0cbca4c9c73a438f0ea45ade699732bab8af9c5ea0a14776908f5b452a2"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "Shared",
+        "ActionExecutor",
+        "Effects"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 3578,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "ActionExecutor",
+        "Effects",
+        "Fly"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 3578,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/ActionExecutor/Effects/Fly.luau",
+      "sourceSha256": "a1e17e1c0e54753a3fd847ee953d8ea9a68a24f689270bbc19c60ed4706709de"
+    },
+    {
+      "bytes": 1580,
+      "path": [
+        "APM_Core",
+        "Shared",
+        "ActionExecutor",
+        "Effects",
+        "Noclip"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1580,
+      "sourceFile": "src/APM_Kit/APM_Core/Shared/ActionExecutor/Effects/Noclip.luau",
+      "sourceSha256": "10929c0cf7a85efbe2ddb3f8371c73722fa798d9f0e5de7656e04d8c9f096c58"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "ClientTemplates"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 13700,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "UI"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.UI"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 13700,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/UI.luau",
+      "sourceSha256": "8bc2b0e6dd5982c9343cdcdfd4a6b5e9214e2e382e43097da10391ea24cdee6f"
+    },
+    {
+      "bytes": 23755,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Shell"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Shell"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 23755,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Shell.luau",
+      "sourceSha256": "7ff9ad231933aa86c6b61816572cc4b90a352349856d1e801b0e18924af5df7f"
+    },
+    {
+      "bytes": 15993,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Core"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Core"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 15993,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Core.luau",
+      "sourceSha256": "3e22997d8f6f7b2eea0c6cf5d86dad697b45a079a4b3a6ccd96c862536d84627"
+    },
+    {
+      "bytes": 5632,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "CategoryPage"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.CategoryPage"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5632,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/CategoryPage.luau",
+      "sourceSha256": "55989523336d207d93454d2a695315afafcf795ca78d4561e6b4457f63ef38d4"
+    },
+    {
+      "enabled": true,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "APM_Boot"
+      ],
+      "tags": [],
+      "class": "LocalScript",
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.APM_Boot"
+      },
+      "runContext": "Legacy",
+      "bytes": 385,
+      "originalBytes": 385,
+      "archivable": true,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/APM_Boot.client.luau",
+      "sourceSha256": "13605dff94f6bbe73501003afb42d1cc0664f0aa6c308979da8bca963a0af099"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Tools"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Tools"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 2055,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Tools",
+        "Fly"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Tools.Fly"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2055,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Fly.luau",
+      "sourceSha256": "c6e7905f2b915c4b41f966bb5ffdebc895602ccb7bf10fe4b7891fca955ffcf4"
+    },
+    {
+      "bytes": 2067,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Tools",
+        "Noclip"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Tools.Noclip"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2067,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Noclip.luau",
+      "sourceSha256": "c51ddade8b803c2659db1bfc0afc97805026202fe6abf8038ccabfd6494badf9"
+    },
+    {
+      "bytes": 2928,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Tools",
+        "ESP"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Tools.ESP"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 2928,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/ESP.luau",
+      "sourceSha256": "6344f4ff1059013616ca70dee7ac1019d7c66f6609e235594e6f1cf431217b78"
+    },
+    {
+      "bytes": 5399,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Tools",
+        "Spectator"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Tools.Spectator"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5399,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Spectator.luau",
+      "sourceSha256": "da88f084278a8a88722dc9cdd794dca3da9e90aa93334f0856456f756e616754"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 4937,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Profile"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Profile"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 4937,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Profile.luau",
+      "sourceSha256": "5e5ce905b042ac2bf253f94d9138876c1420dc99bda6f6a61557337444fbf46e"
+    },
+    {
+      "bytes": 631,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Game"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Game"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 631,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Game.luau",
+      "sourceSha256": "a115c7b021af80d4eed444feda16e3bd0126cf8b3b6f4aa187e168879905af6b"
+    },
+    {
+      "bytes": 23406,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Players"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Players"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 23406,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Players.luau",
+      "sourceSha256": "2f390cfdd4374b4006da966f1cddd22d962cb2a8ae083cd8a36257934a35d41e"
+    },
+    {
+      "bytes": 16851,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Moderation"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Moderation"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 16851,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Moderation.luau",
+      "sourceSha256": "b8503d14901929d6b01849a64d4eaaed8b77e8de6578ba88597d72883baab87a"
+    },
+    {
+      "bytes": 5627,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Bans"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Bans"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5627,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Bans.luau",
+      "sourceSha256": "9303fe306a3133ff7510780177392f45e19b5a53e7b0fc11e2f771fbb181f2d1"
+    },
+    {
+      "bytes": 5271,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Logs"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Logs"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5271,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Logs.luau",
+      "sourceSha256": "63041678cf58e3545e40581df8e80a2838e84268a33f337cc2c6e655fb7f57a4"
+    },
+    {
+      "bytes": 30268,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Settings"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Settings"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 30268,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Settings.luau",
+      "sourceSha256": "a685d3036710b2461812db09d6a96ad8d73da03eb49bb9d7e4b9f0e024c437f7"
+    },
+    {
+      "bytes": 14014,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Security"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Security"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 14014,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Security.luau",
+      "sourceSha256": "d5a48f926b1716de546f06fe56e58ca1c6b7c135d94dae41121277926b5e4eda"
+    },
+    {
+      "bytes": 51814,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Sentinel"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Sentinel"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 51814,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Sentinel.luau",
+      "sourceSha256": "deab2b02fae0d783b026fa062fcdc89e67f1fad41efb6b6af1bd8c2aac4aff7b"
+    },
+    {
+      "bytes": 30643,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Diagnostics"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Diagnostics"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 30643,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Diagnostics.luau",
+      "sourceSha256": "ea65fba0b445a317f9c6dfcb88a58a4f9c04b1c58663a6611a971d1522b6edeb"
+    },
+    {
+      "bytes": 36727,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Home"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Home"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 36720,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Home.luau",
+      "sourceSha256": "09fcdf31311729fa5f4649e660b61fabde6f19d57878172796e115999e02e161"
+    },
+    {
+      "bytes": 33723,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Funny"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Pages.Funny"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 33723,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Funny.luau",
+      "sourceSha256": "74e4eed53a82f63f51b362b287a63a702ae1a89666942798407a1520cffcb915"
+    },
+    {
+      "bytes": 16743,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "Stats"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 16743,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Stats.luau",
+      "sourceSha256": "05d6897f921790ba913c1de2232456797b8102b839e2d87a1fb2e4dcd7641a3a"
+    },
+    {
+      "bytes": 7635,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Pages",
+        "SentinelHelper"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 7635,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/SentinelHelper.luau",
+      "sourceSha256": "40e265330e39edb8d931a45c6bf376775dc4486288805b669ba4b06d46f92678"
+    },
+    {
+      "bytes": 354,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Remotes"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Remotes"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 354,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Remotes.luau",
+      "sourceSha256": "e6bc90b35f896d20918ce2a8bbd63f9287bb2f0631fb5c4718318aed33499ef9"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Components"
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 17147,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "AutoBridgePanel"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Components.AutoBridgePanel"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 17147,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/AutoBridgePanel.luau",
+      "sourceSha256": "7cacf009918c0da183dd7f43197c0c2497095f4628257aa0d59665faee83f698"
+    },
+    {
+      "bytes": 9054,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "Charts"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 9054,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/Charts.luau",
+      "sourceSha256": "8104587dcd4d4eac18061b19344261b84daac56b38f56c99de22e7dc79571243"
+    },
+    {
+      "bytes": 9134,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "FunnyPreview"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 9134,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/FunnyPreview.luau",
+      "sourceSha256": "4fa5b51a7c6cd26ca5c6f42e8d71af881a1774b337159e276ccd6f716b4881bc"
+    },
+    {
+      "bytes": 32221,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "AnnounceDesigner"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Components.AnnounceDesigner"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 32221,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/AnnounceDesigner.luau",
+      "sourceSha256": "e8637b619924865184520bef01c52c36545bb1f30cd5a612ad3e437c80c8d035"
+    },
+    {
+      "bytes": 36660,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "HelperSections"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 36660,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/HelperSections.luau",
+      "sourceSha256": "ba0aeacc1e2711d72668930a8b3b50366b02ff4b9cf25f27f0107555f9957e50"
+    },
+    {
+      "bytes": 22921,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "SentinelSuggest"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 22921,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/SentinelSuggest.luau",
+      "sourceSha256": "f047f6e2ed376c75b333718de7328e3e6a6847fb76c45dbf6402c7ebea1e7feb"
+    },
+    {
+      "bytes": 15351,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Components",
+        "SentinelPanels"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 15351,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/SentinelPanels.luau",
+      "sourceSha256": "eaee76c72d118f713a85686243f6b5b14727013c30560f1d989f786ebfdf4b4a"
+    },
+    {
+      "bytes": 16750,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Launcher"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Client.Launcher"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 16750,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Launcher.luau",
+      "sourceSha256": "c3d5ec4175b5f481ccfc4c7763178ff0af0df017fc2ff399df12facf0ec9e936"
+    },
+    {
+      "bytes": 10033,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Glyph"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 10033,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Glyph.luau",
+      "sourceSha256": "c4906a17a58445abb26590e5790b28b00bea328201dc15e1051de31aa6ad7256"
+    },
+    {
+      "bytes": 48293,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Client",
+        "Assistant"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 48293,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Assistant.luau",
+      "sourceSha256": "a844f42e14ae902a9e70fbd9ae395c9fa0338b7f60352866ae46d15d28c30370"
+    },
+    {
+      "enabled": true,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "Recovery"
+      ],
+      "tags": [],
+      "class": "LocalScript",
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.Recovery"
+      },
+      "runContext": "Legacy",
+      "bytes": 1138,
+      "originalBytes": 1138,
+      "archivable": true,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/Recovery.client.luau",
+      "sourceSha256": "8d1e4a7060301491932e602ba2e912f796a760b6fd61c034126ee9156f94c52f"
+    },
+    {
+      "enabled": true,
+      "path": [
+        "APM_Core",
+        "ClientTemplates",
+        "APM_Notices"
+      ],
+      "tags": [],
+      "class": "LocalScript",
+      "attributes": {
+        "APMComponentId": "APM_Core.ClientTemplates.APM_Notices"
+      },
+      "runContext": "Legacy",
+      "bytes": 10129,
+      "originalBytes": 10129,
+      "archivable": true,
+      "sourceFile": "src/APM_Kit/APM_Core/ClientTemplates/APM_Notices.client.luau",
+      "sourceSha256": "4d4221e08671a058224c232b4ff60d40e722121cf89a4afd86a4b189555f6420"
+    },
+    {
+      "bytes": 5136,
+      "path": [
+        "APM_Core",
+        "Bootstrap"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Bootstrap"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 5136,
+      "sourceFile": "src/APM_Kit/APM_Core/Bootstrap.luau",
+      "sourceSha256": "bc450ed16140a7228a50cf9a9dda831e15f7af0c02b0c7302c8e1fc53a8ef590"
+    },
+    {
+      "bytes": 1175,
+      "path": [
+        "APM_Core",
+        "Migrations"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Migrations"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1175,
+      "sourceFile": "src/APM_Kit/APM_Core/Migrations.luau",
+      "sourceSha256": "2bff0982dbfff6d465776e9b9f2a2d188dd3e6f7f58cc446b26e31163bdc2ad7"
+    },
+    {
+      "bytes": 309,
+      "path": [
+        "APM_Core",
+        "Release"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.Release"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 309,
+      "sourceFile": "src/APM_Kit/APM_Core/Release.luau",
+      "sourceSha256": "214977d4e35d2583c884f58d4aeac8ab4049d1b496926fc8800036ad98bcb016"
+    },
+    {
+      "path": [
+        "APM_Core",
+        "LICENSE"
+      ],
+      "attributes": {
+        "APMComponentId": "APM_Core.LICENSE"
+      },
+      "tags": [],
+      "value": "MIT License\n\nCopyright (c) 2026 APM contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+      "class": "StringValue",
+      "archivable": true
+    },
+    {
+      "enabled": true,
+      "path": [
+        "ToolboxBootstrap"
+      ],
+      "tags": [],
+      "class": "Script",
+      "attributes": [],
+      "runContext": "Server",
+      "bytes": 10215,
+      "originalBytes": 10215,
+      "archivable": true,
+      "sourceFile": "src/APM_Kit/ToolboxBootstrap.server.luau",
+      "sourceSha256": "f112d3d10a588c1220fd762a6a598bfb4298cd9e3c79d433054f1a200a304cc6"
+    },
+    {
+      "path": [
+        "READ ME!!!"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 1739,
+      "path": [
+        "READ ME!!!",
+        "0 - Langue · Language · Idioma · Língua · Sprache · Язык · 语言"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1732,
+      "sourceFile": "src/APM_Kit/READ ME!!!/0 - Langue · Language · Idioma · Língua · Sprache · Язык · 语言.luau",
+      "sourceSha256": "6bf2d306e7cbbc30ec26c49b3ee2c351aa50ab349d14c9b11422524ab4fc948d"
+    },
+    {
+      "bytes": 34361,
+      "path": [
+        "READ ME!!!",
+        "1 - Français"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 34347,
+      "sourceFile": "src/APM_Kit/READ ME!!!/1 - Français.luau",
+      "sourceSha256": "fafabacbdd648728022f82768a03ec062277a76d23d5ae43818a5ad0e8f9da08"
+    },
+    {
+      "bytes": 30933,
+      "path": [
+        "READ ME!!!",
+        "2 - English"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 30919,
+      "sourceFile": "src/APM_Kit/READ ME!!!/2 - English.luau",
+      "sourceSha256": "c7b89920ca7e4b5f49f249b8ad731d7e47545a3ce00c35274ff0f16a4114459d"
+    },
+    {
+      "bytes": 33229,
+      "path": [
+        "READ ME!!!",
+        "3 - Español"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 33215,
+      "sourceFile": "src/APM_Kit/READ ME!!!/3 - Español.luau",
+      "sourceSha256": "98df65f08e53d3cd41e0ae580bf9969effd44d7276f1a507bf870790b6c96003"
+    },
+    {
+      "bytes": 32829,
+      "path": [
+        "READ ME!!!",
+        "4 - Português"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 32815,
+      "sourceFile": "src/APM_Kit/READ ME!!!/4 - Português.luau",
+      "sourceSha256": "b05a1e5446acba69a4e296953810f838ee548e5ed777c64878fa70a66fdce3be"
+    },
+    {
+      "bytes": 33879,
+      "path": [
+        "READ ME!!!",
+        "5 - Deutsch"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 33865,
+      "sourceFile": "src/APM_Kit/READ ME!!!/5 - Deutsch.luau",
+      "sourceSha256": "43cc923dae9035247865d0447250c351b2d67b898fd2f9f2818d9d0adcf06cbe"
+    },
+    {
+      "bytes": 48413,
+      "path": [
+        "READ ME!!!",
+        "6 - Русский"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 48399,
+      "sourceFile": "src/APM_Kit/READ ME!!!/6 - Русский.luau",
+      "sourceSha256": "34d394ace43150e74c67fcce726a19cec95804d5e83bd4f43e634fae7edb6d98"
+    },
+    {
+      "bytes": 31223,
+      "path": [
+        "READ ME!!!",
+        "7 - 中文"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 31209,
+      "sourceFile": "src/APM_Kit/READ ME!!!/7 - 中文.luau",
+      "sourceSha256": "0dd9b4f9c2efa40dacea500dfb9cf1aa7ba64aaf11e03a10a08b25902e9f9e17"
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates"
+      ],
+      "attributes": {
+        "APMDeveloperTemplates": true,
+        "APMInactiveCopy": true
+      },
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates",
+        "Commands"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates",
+        "Commands",
+        "MonJeu"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 1080,
+      "path": [
+        "APM_DeveloperTemplates",
+        "Commands",
+        "MonJeu",
+        "MonJeu_Informer"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1080,
+      "sourceFile": "src/APM_Kit/APM_DeveloperTemplates/Commands/MonJeu/MonJeu_Informer.luau",
+      "sourceSha256": "92224017348ab0b881a189885b11e50184835fe19bebf7699a612424ef7d4bbc"
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates",
+        "ClientPages"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates",
+        "ClientPages",
+        "MonJeu"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 1278,
+      "path": [
+        "APM_DeveloperTemplates",
+        "ClientPages",
+        "MonJeu",
+        "MonJeuPage"
+      ],
+      "attributes": {
+        "ApiVersion": 1,
+        "Permission": "MonJeu.Page"
+      },
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1278,
+      "sourceFile": "src/APM_Kit/APM_DeveloperTemplates/ClientPages/MonJeu/MonJeuPage.luau",
+      "sourceSha256": "32506596125be864891044dbcd5e626ff4c0c87c2f4e17918cf07fd3ca484116"
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates",
+        "Server"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 1205,
+      "path": [
+        "APM_DeveloperTemplates",
+        "Server",
+        "MonJeuIntegration"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1205,
+      "sourceFile": "src/APM_Kit/APM_DeveloperTemplates/Server/MonJeuIntegration.luau",
+      "sourceSha256": "d4b4e945aee0b0ddf22709b59856ecd1e10cb50b224f373f9534a343be2cbd55"
+    },
+    {
+      "path": [
+        "APM_DeveloperTemplates",
+        "Adapters"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "Folder",
+      "archivable": true
+    },
+    {
+      "bytes": 1326,
+      "path": [
+        "APM_DeveloperTemplates",
+        "Adapters",
+        "MonJeuStatus"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 1326,
+      "sourceFile": "src/APM_Kit/APM_DeveloperTemplates/Adapters/MonJeuStatus.luau",
+      "sourceSha256": "792304c96ff90bae45b118de7101e16b7f66a71f07eca5b9ff8b45333e4bba88"
+    },
+    {
+      "bytes": 973,
+      "path": [
+        "APM_DeveloperTemplates",
+        "START_HERE"
+      ],
+      "attributes": [],
+      "tags": [],
+      "class": "ModuleScript",
+      "archivable": true,
+      "originalBytes": 973,
+      "sourceFile": "src/APM_Kit/APM_DeveloperTemplates/START_HERE.luau",
+      "sourceSha256": "ff6b00ef1c4756a2b999bd6128427fe5d522b6f66efc2e4fede17dee31495a1e"
+    }
+  ]
+}

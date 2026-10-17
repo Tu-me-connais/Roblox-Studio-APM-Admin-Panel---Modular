@@ -1,453 +1,2852 @@
 {
-  "name": "APM-2.1-preview",
+  "name": "APM-2.10.2",
   "emitLegacyScripts": true,
   "syncRules": [
     {
-      "pattern": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Boot.luau",
+      "pattern": "src/APM_Kit/APM_Bootstrap.server.luau",
+      "use": "legacyServerScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Bootstrap.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/APM_Boot.client.luau",
       "use": "legacyClientScript"
     },
     {
-      "pattern": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Notices.luau",
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Assistant.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/CategoryPage.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/AnnounceDesigner.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/AutoBridgePanel.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/Charts.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/FunnyPreview.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/HelperSections.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/SentinelPanels.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/SentinelSuggest.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Core.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Glyph.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Launcher.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Bans.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Diagnostics.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Funny.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Game.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Home.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Logs.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Moderation.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Players.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Profile.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Security.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Sentinel.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/SentinelHelper.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Settings.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Stats.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Remotes.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Shell.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/ESP.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Fly.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Noclip.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Spectator.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/UI.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/APM_Notices.client.luau",
       "use": "legacyClientScript"
     },
     {
-      "pattern": "src/StarterPlayer/StarterPlayerScripts/Recovery.luau",
+      "pattern": "src/APM_Kit/APM_Core/ClientTemplates/Recovery.client.luau",
       "use": "legacyClientScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Migrations.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Release.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/APMService.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Announcements.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/Actions.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/Catalog.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/de.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/en.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/es.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/fr.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/pt.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/ru.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/zh.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/Config.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/External.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/Parser.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Assistant/Unicode.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/AutoBridge.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Controls.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Dispatcher.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Dispatcher/Hooks.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Extensions.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Features.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Funny.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Funny/Catalog.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Funny/Network.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Funny/Scenes.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Funny/Transforms.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Grades.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Guard.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/HomeTelemetry.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/InstallationGuard.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Journal.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Preferences.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Profiles.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Access.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Assignments.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Authority.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Identity.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Resolution.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Simulation.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Storage.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Ranks/Sync.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Roster.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Sentinel.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/SentinelStore.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Sessions.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Simulation.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/SourceScope.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Statistics.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/SuiteConfig.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/TextFilter.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Core/Version.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Ban.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Bring.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Freeze.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/GiveTool.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Godmode.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Heal.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Invisible.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/JumpPower.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Kick.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Kill.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Leaderstats.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Mute.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Respawn.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Return.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Shutdown.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Speed.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Teleport.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/TimeOfDay.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/ToSpawn.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Unban.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Modules/Warn.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Server/Settings.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/ActionCatalog.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/ActionExecutor.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/ActionExecutor/Effects/Fly.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/ActionExecutor/Effects/Noclip.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Announcements.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Config.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Configuration.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Common.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Bubbles.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Confetti.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Disco.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Ducks.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Fireworks.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Hearts.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Potato.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Rainbow.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Snow.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Solar.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/de.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/es.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/pt.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/ru.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/zh.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Bans.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Common.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Diagnostics.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Dispatch.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Funny.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Game.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Home.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Logs.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Moderation.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Players.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Profile.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Security.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Sentinel.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/SentinelAssistant.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Settings.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Shell.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Stats.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/de.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/en.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/es.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/fr.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/pt.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/ru.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Lang/zh.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Core/Shared/Remotes.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_DeveloperTemplates/Adapters/MonJeuStatus.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_DeveloperTemplates/ClientPages/MonJeu/MonJeuPage.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_DeveloperTemplates/Commands/MonJeu/MonJeu_Informer.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_DeveloperTemplates/START_HERE.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_DeveloperTemplates/Server/MonJeuIntegration.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Extensions/Config/ServerSettings.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/APM_Extensions/Config/SharedConfig.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/Installer.server.luau",
+      "use": "legacyServerScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/0 - Langue · Language · Idioma · Língua · Sprache · Язык · 语言.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/1 - Français.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/2 - English.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/3 - Español.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/4 - Português.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/5 - Deutsch.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/6 - Русский.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/READ ME!!!/7 - 中文.luau",
+      "use": "moduleScript"
+    },
+    {
+      "pattern": "src/APM_Kit/ToolboxBootstrap.server.luau",
+      "use": "legacyServerScript"
     }
   ],
   "tree": {
     "$className": "DataModel",
     "$ignoreUnknownInstances": true,
-    "ServerStorage": {
-      "$className": "ServerStorage",
+    "Workspace": {
+      "$className": "Workspace",
       "$ignoreUnknownInstances": true,
-      "APM_Core": {
+      "APM_DistributionKits": {
+        "$className": "Folder",
         "$ignoreUnknownInstances": true,
-        "$className": "Model",
-        "$attributes": {
-          "APMChannel": {
-            "String": "experimental"
-          },
-          "APMCore": {
-            "Bool": true
-          },
-          "APMInstallationSchema": {
-            "Float64": 3
-          },
-          "APMLicense": {
-            "String": "MIT"
-          },
-          "APMVersion": {
-            "String": "2.1.0-preview.1"
-          }
-        },
-        "Server": {
+        "APM_Kit": {
           "$ignoreUnknownInstances": true,
-          "$className": "Folder",
-          "APMService": {
-            "$ignoreUnknownInstances": true,
-            "$path": "src/ServerScriptService/APM_Server/APMService.luau"
-          },
-          "Core": {
-            "$ignoreUnknownInstances": true,
-            "$className": "Folder",
-            "AutoBridge": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/AutoBridge.luau"
+          "$className": "Model",
+          "$attributes": {
+            "APMDistributionSchema": {
+              "Float64": 3
             },
-            "Controls": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Controls.luau"
+            "APMLicense": {
+              "String": "MIT"
             },
-            "Extensions": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Extensions.luau"
+            "APMToolboxApi": {
+              "Float64": 1
             },
-            "Grades": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Grades.luau"
+            "APMVersion": {
+              "String": "2.10.2"
             },
-            "Guard": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Guard.luau"
+            "APM_Kit": {
+              "Bool": true
             },
-            "Journal": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Journal.luau"
-            },
-            "Preferences": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Preferences.luau"
-            },
-            "Profiles": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Profiles.luau"
-            },
-            "Ranks": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Ranks.luau"
-            },
-            "Roster": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Roster.luau"
-            },
-            "Sentinel": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Sentinel.luau"
-            },
-            "Sessions": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Sessions.luau"
-            },
-            "Simulation": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Simulation.luau"
-            },
-            "SuiteConfig": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/SuiteConfig.luau"
-            },
-            "TextFilter": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/TextFilter.luau"
-            },
-            "Version": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Core/Version.luau"
+            "AllowExperimental": {
+              "Bool": false
             }
           },
-          "Modules": {
+          "$properties": {
+            "Archivable": true
+          },
+          "APM_Bootstrap": {
             "$ignoreUnknownInstances": true,
-            "$className": "Folder",
-            "Ban": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Ban.luau"
+            "$path": "src/APM_Kit/APM_Bootstrap.server.luau",
+            "$attributes": {
+              "APMBootstrapApi": {
+                "Float64": 1
+              },
+              "AllowExperimental": {
+                "Bool": true
+              }
             },
-            "Bring": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Bring.luau"
-            },
-            "Freeze": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Freeze.luau"
-            },
-            "GiveTool": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/GiveTool.luau"
-            },
-            "Godmode": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Godmode.luau"
-            },
-            "Heal": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Heal.luau"
-            },
-            "Invisible": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Invisible.luau"
-            },
-            "JumpPower": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/JumpPower.luau"
-            },
-            "Kick": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Kick.luau"
-            },
-            "Kill": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Kill.luau"
-            },
-            "Leaderstats": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Leaderstats.luau"
-            },
-            "Mute": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Mute.luau"
-            },
-            "Respawn": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Respawn.luau"
-            },
-            "Return": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Return.luau"
-            },
-            "Shutdown": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Shutdown.luau"
-            },
-            "Speed": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Speed.luau"
-            },
-            "Teleport": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Teleport.luau"
-            },
-            "TimeOfDay": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/TimeOfDay.luau"
-            },
-            "ToSpawn": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/ToSpawn.luau"
-            },
-            "Unban": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Unban.luau"
-            },
-            "Warn": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ServerScriptService/APM_Server/Modules/Warn.luau"
+            "$properties": {
+              "Archivable": true,
+              "Enabled": false,
+              "RunContext": "Legacy"
             }
           },
-          "Settings": {
+          "APM_Core": {
             "$ignoreUnknownInstances": true,
-            "$path": "src/ServerScriptService/APM_Server/Settings.luau"
-          }
-        },
-        "Shared": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder",
-          "Config": {
-            "$ignoreUnknownInstances": true,
-            "$path": "src/ReplicatedStorage/APM_Shared/Config.luau"
-          },
-          "Configuration": {
-            "$ignoreUnknownInstances": true,
-            "$path": "src/ReplicatedStorage/APM_Shared/Configuration.luau"
-          },
-          "Lang": {
-            "$ignoreUnknownInstances": true,
-            "$path": "src/ReplicatedStorage/APM_Shared/Lang.luau",
-            "de": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ReplicatedStorage/APM_Shared/Lang/de.luau"
+            "$className": "Model",
+            "$attributes": {
+              "APMChannel": {
+                "String": "stable"
+              },
+              "APMComponentId": {
+                "String": "APM_Core"
+              },
+              "APMCore": {
+                "Bool": true
+              },
+              "APMInstallationSchema": {
+                "Float64": 3
+              },
+              "APMLicense": {
+                "String": "MIT"
+              },
+              "APMVersion": {
+                "String": "2.10.2"
+              }
             },
-            "en": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ReplicatedStorage/APM_Shared/Lang/en.luau"
+            "$properties": {
+              "Archivable": true
             },
-            "es": {
+            "Bootstrap": {
               "$ignoreUnknownInstances": true,
-              "$path": "src/ReplicatedStorage/APM_Shared/Lang/es.luau"
-            },
-            "fr": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ReplicatedStorage/APM_Shared/Lang/fr.luau"
-            },
-            "pt": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/ReplicatedStorage/APM_Shared/Lang/pt.luau"
-            }
-          },
-          "Remotes": {
-            "$ignoreUnknownInstances": true,
-            "$path": "src/ReplicatedStorage/APM_Shared/Remotes.luau"
-          }
-        },
-        "ClientTemplates": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder",
-          "APM_Client": {
-            "$ignoreUnknownInstances": true,
-            "$className": "Folder",
-            "APM_Boot": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Boot.luau",
+              "$path": "src/APM_Kit/APM_Core/Bootstrap.luau",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.Bootstrap"
+                }
+              },
               "$properties": {
-                "Disabled": false
+                "Archivable": true
               }
             },
-            "CategoryPage": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/CategoryPage.luau"
-            },
-            "Components": {
+            "ClientTemplates": {
               "$ignoreUnknownInstances": true,
               "$className": "Folder",
-              "AutoBridgePanel": {
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.ClientTemplates"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              },
+              "APM_Client": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Components/AutoBridgePanel.luau"
+                "$className": "Folder",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.ClientTemplates.APM_Client"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                },
+                "APM_Boot": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/APM_Boot.client.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.APM_Boot"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true,
+                    "Enabled": true,
+                    "RunContext": "Legacy"
+                  }
+                },
+                "Assistant": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Assistant.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "CategoryPage": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/CategoryPage.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.CategoryPage"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Components": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Components"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "AnnounceDesigner": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/AnnounceDesigner.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Components.AnnounceDesigner"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "AutoBridgePanel": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/AutoBridgePanel.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Components.AutoBridgePanel"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Charts": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/Charts.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "FunnyPreview": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/FunnyPreview.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "HelperSections": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/HelperSections.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "SentinelPanels": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/SentinelPanels.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "SentinelSuggest": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Components/SentinelSuggest.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "Core": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Core.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Core"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Glyph": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Glyph.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Launcher": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Launcher.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Launcher"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Pages": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Pages"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Bans": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Bans.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Bans"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Diagnostics": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Diagnostics.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Diagnostics"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Funny": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Funny.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Funny"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Game": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Game.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Game"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Home": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Home.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Home"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Logs": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Logs.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Logs"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Moderation": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Moderation.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Moderation"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Players": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Players.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Players"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Profile": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Profile.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Profile"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Security": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Security.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Security"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Sentinel": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Sentinel.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Sentinel"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "SentinelHelper": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/SentinelHelper.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Settings": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Settings.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Pages.Settings"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Stats": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Pages/Stats.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "Remotes": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Remotes.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Remotes"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Shell": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Shell.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Shell"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Tools": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.Tools"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "ESP": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/ESP.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Tools.ESP"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Fly": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Fly.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Tools.Fly"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Noclip": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Noclip.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Tools.Noclip"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Spectator": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/Tools/Spectator.luau",
+                    "$attributes": {
+                      "APMComponentId": {
+                        "String": "APM_Core.ClientTemplates.APM_Client.Tools.Spectator"
+                      }
+                    },
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "UI": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Client/UI.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.ClientTemplates.APM_Client.UI"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                }
+              },
+              "APM_Notices": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/ClientTemplates/APM_Notices.client.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.ClientTemplates.APM_Notices"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true,
+                  "Enabled": true,
+                  "RunContext": "Legacy"
+                }
+              },
+              "Recovery": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/ClientTemplates/Recovery.client.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.ClientTemplates.Recovery"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true,
+                  "Enabled": true,
+                  "RunContext": "Legacy"
+                }
               }
             },
-            "Core": {
+            "LICENSE": {
               "$ignoreUnknownInstances": true,
-              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Core.luau"
+              "$className": "StringValue",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.LICENSE"
+                }
+              },
+              "$properties": {
+                "Archivable": true,
+                "Value": "MIT License\n\nCopyright (c) 2026 APM contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+              }
             },
-            "Pages": {
+            "Migrations": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/APM_Core/Migrations.luau",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.Migrations"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "Release": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/APM_Core/Release.luau",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.Release"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "Server": {
               "$ignoreUnknownInstances": true,
               "$className": "Folder",
-              "Bans": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Bans.luau"
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.Server"
+                }
               },
-              "Diagnostics": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Diagnostics.luau"
+              "$properties": {
+                "Archivable": true
               },
-              "Game": {
+              "APMService": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Game.luau"
+                "$path": "src/APM_Kit/APM_Core/Server/APMService.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Server.APMService"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
               },
-              "Home": {
+              "Core": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Home.luau"
+                "$className": "Folder",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Server.Core"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                },
+                "Announcements": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Announcements.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Announcements"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Assistant": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant.luau",
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Actions": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/Actions.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Catalog": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/Catalog.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "CommandLocalization": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization.luau",
+                    "$properties": {
+                      "Archivable": true
+                    },
+                    "de": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/de.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    },
+                    "en": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/en.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    },
+                    "es": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/es.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    },
+                    "fr": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/fr.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    },
+                    "pt": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/pt.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    },
+                    "ru": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/ru.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    },
+                    "zh": {
+                      "$ignoreUnknownInstances": true,
+                      "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/CommandLocalization/zh.luau",
+                      "$properties": {
+                        "Archivable": true
+                      }
+                    }
+                  },
+                  "Config": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/Config.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "External": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/External.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Parser": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/Parser.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Unicode": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Assistant/Unicode.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "AutoBridge": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/AutoBridge.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.AutoBridge"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Controls": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Controls.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Controls"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Dispatcher": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Dispatcher.luau",
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Hooks": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Dispatcher/Hooks.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "Extensions": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Extensions.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Extensions"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Features": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Features.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Features"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Funny": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Funny.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Funny"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Catalog": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Funny/Catalog.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Network": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Funny/Network.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Scenes": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Funny/Scenes.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Transforms": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Funny/Transforms.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "Grades": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Grades.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Grades"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Guard": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Guard.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Guard"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "HomeTelemetry": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/HomeTelemetry.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.HomeTelemetry"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "InstallationGuard": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/InstallationGuard.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.InstallationGuard"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Journal": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Journal.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Journal"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Preferences": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Preferences.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Preferences"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Profiles": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Profiles.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Profiles"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Ranks": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Ranks"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Access": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Access.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Assignments": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Assignments.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Authority": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Authority.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Identity": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Identity.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Resolution": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Resolution.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Simulation": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Simulation.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Storage": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Storage.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Sync": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Server/Core/Ranks/Sync.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "Roster": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Roster.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Roster"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Sentinel": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Sentinel.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Sentinel"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "SentinelStore": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/SentinelStore.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.SentinelStore"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Sessions": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Sessions.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Sessions"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Simulation": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Simulation.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Simulation"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "SourceScope": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/SourceScope.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.SourceScope"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Statistics": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Statistics.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "SuiteConfig": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/SuiteConfig.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.SuiteConfig"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "TextFilter": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/TextFilter.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.TextFilter"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Version": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Core/Version.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Core.Version"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                }
               },
-              "Logs": {
+              "Modules": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Logs.luau"
-              },
-              "Moderation": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Moderation.luau"
-              },
-              "Players": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Players.luau"
-              },
-              "Profile": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Profile.luau"
-              },
-              "Security": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Security.luau"
-              },
-              "Sentinel": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Sentinel.luau"
+                "$className": "Folder",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Server.Modules"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                },
+                "Ban": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Ban.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Ban"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Bring": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Bring.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Bring"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Freeze": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Freeze.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Freeze"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "GiveTool": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/GiveTool.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.GiveTool"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Godmode": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Godmode.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Godmode"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Heal": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Heal.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Heal"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Invisible": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Invisible.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Invisible"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "JumpPower": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/JumpPower.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.JumpPower"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Kick": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Kick.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Kick"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Kill": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Kill.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Kill"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Leaderstats": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Leaderstats.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Leaderstats"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Mute": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Mute.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Mute"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Respawn": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Respawn.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Respawn"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Return": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Return.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Return"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Shutdown": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Shutdown.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Shutdown"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Speed": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Speed.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Speed"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Teleport": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Teleport.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Teleport"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "TimeOfDay": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/TimeOfDay.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.TimeOfDay"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "ToSpawn": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/ToSpawn.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.ToSpawn"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Unban": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Unban.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Unban"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Warn": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Server/Modules/Warn.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Server.Modules.Warn"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                }
               },
               "Settings": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Pages/Settings.luau"
+                "$path": "src/APM_Kit/APM_Core/Server/Settings.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Server.Settings"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
               }
             },
-            "Remotes": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Remotes.luau"
-            },
-            "Shell": {
-              "$ignoreUnknownInstances": true,
-              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Shell.luau"
-            },
-            "Tools": {
+            "Shared": {
               "$ignoreUnknownInstances": true,
               "$className": "Folder",
-              "ESP": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/ESP.luau"
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Core.Shared"
+                }
               },
-              "Fly": {
-                "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/Fly.luau"
+              "$properties": {
+                "Archivable": true
               },
-              "Noclip": {
+              "ActionCatalog": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/Noclip.luau"
+                "$path": "src/APM_Kit/APM_Core/Shared/ActionCatalog.luau",
+                "$properties": {
+                  "Archivable": true
+                }
               },
-              "Spectator": {
+              "ActionExecutor": {
                 "$ignoreUnknownInstances": true,
-                "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/Tools/Spectator.luau"
+                "$path": "src/APM_Kit/APM_Core/Shared/ActionExecutor.luau",
+                "$properties": {
+                  "Archivable": true
+                },
+                "Effects": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Fly": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/ActionExecutor/Effects/Fly.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Noclip": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/ActionExecutor/Effects/Noclip.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                }
+              },
+              "Announcements": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/Shared/Announcements.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Shared.Announcements"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
+              },
+              "Config": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/Shared/Config.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Shared.Config"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
+              },
+              "Configuration": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/Shared/Configuration.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Shared.Configuration"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
+              },
+              "FunnyVisuals": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Shared.FunnyVisuals"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                },
+                "Common": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Common.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "Scenes": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Bubbles": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Bubbles.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Confetti": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Confetti.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Disco": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Disco.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Ducks": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Ducks.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Fireworks": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Fireworks.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Hearts": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Hearts.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Potato": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Potato.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Rainbow": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Rainbow.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Snow": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Snow.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Solar": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/FunnyVisuals/Scenes/Solar.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                }
+              },
+              "Lang": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/Shared/Lang.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Shared.Lang"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                },
+                "Phrases": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "de": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/de.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "es": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/es.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "pt": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/pt.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "ru": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/ru.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "zh": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Phrases/zh.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "Tabs": {
+                  "$ignoreUnknownInstances": true,
+                  "$className": "Folder",
+                  "$properties": {
+                    "Archivable": true
+                  },
+                  "Bans": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Bans.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Common": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Common.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Diagnostics": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Diagnostics.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Dispatch": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Dispatch.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Funny": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Funny.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Game": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Game.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Home": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Home.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Logs": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Logs.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Moderation": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Moderation.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Players": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Players.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Profile": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Profile.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Security": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Security.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Sentinel": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Sentinel.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "SentinelAssistant": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/SentinelAssistant.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Settings": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Settings.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Shell": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Shell.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  },
+                  "Stats": {
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/APM_Kit/APM_Core/Shared/Lang/Tabs/Stats.luau",
+                    "$properties": {
+                      "Archivable": true
+                    }
+                  }
+                },
+                "de": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/de.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Shared.Lang.de"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "en": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/en.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Shared.Lang.en"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "es": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/es.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Shared.Lang.es"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "fr": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/fr.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Shared.Lang.fr"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "pt": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/pt.luau",
+                  "$attributes": {
+                    "APMComponentId": {
+                      "String": "APM_Core.Shared.Lang.pt"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "ru": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/ru.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                },
+                "zh": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_Core/Shared/Lang/zh.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                }
+              },
+              "Remotes": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Core/Shared/Remotes.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Core.Shared.Remotes"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
+              }
+            }
+          },
+          "APM_DeveloperTemplates": {
+            "$ignoreUnknownInstances": true,
+            "$className": "Folder",
+            "$attributes": {
+              "APMDeveloperTemplates": {
+                "Bool": true
+              },
+              "APMInactiveCopy": {
+                "Bool": true
               }
             },
-            "UI": {
+            "$properties": {
+              "Archivable": true
+            },
+            "Adapters": {
               "$ignoreUnknownInstances": true,
-              "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/UI.luau"
+              "$className": "Folder",
+              "$properties": {
+                "Archivable": true
+              },
+              "MonJeuStatus": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_DeveloperTemplates/Adapters/MonJeuStatus.luau",
+                "$properties": {
+                  "Archivable": true
+                }
+              }
+            },
+            "ClientPages": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$properties": {
+                "Archivable": true
+              },
+              "MonJeu": {
+                "$ignoreUnknownInstances": true,
+                "$className": "Folder",
+                "$properties": {
+                  "Archivable": true
+                },
+                "MonJeuPage": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_DeveloperTemplates/ClientPages/MonJeu/MonJeuPage.luau",
+                  "$attributes": {
+                    "ApiVersion": {
+                      "Float64": 1
+                    },
+                    "Permission": {
+                      "String": "MonJeu.Page"
+                    }
+                  },
+                  "$properties": {
+                    "Archivable": true
+                  }
+                }
+              }
+            },
+            "Commands": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$properties": {
+                "Archivable": true
+              },
+              "MonJeu": {
+                "$ignoreUnknownInstances": true,
+                "$className": "Folder",
+                "$properties": {
+                  "Archivable": true
+                },
+                "MonJeu_Informer": {
+                  "$ignoreUnknownInstances": true,
+                  "$path": "src/APM_Kit/APM_DeveloperTemplates/Commands/MonJeu/MonJeu_Informer.luau",
+                  "$properties": {
+                    "Archivable": true
+                  }
+                }
+              }
+            },
+            "START_HERE": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/APM_DeveloperTemplates/START_HERE.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "Server": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$properties": {
+                "Archivable": true
+              },
+              "MonJeuIntegration": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_DeveloperTemplates/Server/MonJeuIntegration.luau",
+                "$properties": {
+                  "Archivable": true
+                }
+              }
             }
           },
-          "Recovery": {
+          "APM_Extensions": {
             "$ignoreUnknownInstances": true,
-            "$path": "src/StarterPlayer/StarterPlayerScripts/Recovery.luau",
+            "$className": "Folder",
+            "$attributes": {
+              "APMComponentId": {
+                "String": "APM_Extensions"
+              },
+              "APMExtensionsSchema": {
+                "Float64": 1
+              }
+            },
             "$properties": {
-              "Disabled": false
+              "Archivable": true
+            },
+            "Adapters": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Extensions.Adapters"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "ClientPages": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Extensions.ClientPages"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "Commands": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Extensions.Commands"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "Config": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Extensions.Config"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              },
+              "ServerSettings": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Extensions/Config/ServerSettings.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Extensions.Config.ServerSettings"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
+              },
+              "SharedConfig": {
+                "$ignoreUnknownInstances": true,
+                "$path": "src/APM_Kit/APM_Extensions/Config/SharedConfig.luau",
+                "$attributes": {
+                  "APMComponentId": {
+                    "String": "APM_Extensions.Config.SharedConfig"
+                  }
+                },
+                "$properties": {
+                  "Archivable": true
+                }
+              }
+            },
+            "Server": {
+              "$ignoreUnknownInstances": true,
+              "$className": "Folder",
+              "$attributes": {
+                "APMComponentId": {
+                  "String": "APM_Extensions.Server"
+                }
+              },
+              "$properties": {
+                "Archivable": true
+              }
             }
           },
-          "APM_Notices": {
+          "INSTALLATION": {
             "$ignoreUnknownInstances": true,
-            "$path": "src/StarterPlayer/StarterPlayerScripts/APM_Client/APM_Notices.luau",
+            "$className": "StringValue",
             "$properties": {
-              "Disabled": false
+              "Archivable": true,
+              "Value": "📖 Guide complet / Full guide — 7 langues / languages : APM_Kit > READ ME!!!\nCommence par / Start with « 0 - Langue · Language ».\n\nAPM | Admin Panel - Modular — 2.10.2 (stable) · MIT · Gratuit / Free\n\nFRANÇAIS\n\nTOOLBOX : insère APM_Kit dans Workspace ou ServerScriptService, configure les comptes autorisés, puis lance Play.\nToolboxBootstrap reste activé, avec RunContext Server. Il range le kit dans ServerStorage et poursuit le lancement avec un chargeur privé dans ServerScriptService.\nServerStorage seul ne lance pas les scripts. Installer et APM_Bootstrap restent désactivés : ils servent à l'installation manuelle alternative.\n\nCONFIGURATION ACTIVE : APM_Kit.APM_Extensions.Config.ServerSettings et SharedConfig.\nSi une configuration externe compatible ServerStorage.APM_Extensions existe, elle est conservée et prioritaire : modifie alors ses fichiers Config.\nHome et Diagnostics indiquent la configuration active. Déclare explicitement tes comptes fixes dans Settings.Users du ServerSettings actif, avec leur UserId et le grade choisi.\nLa configuration livrée n'accorde aucun grade automatiquement. Les grades et permissions enregistrés par le panneau restent pris en compte.\nLes GUI et remotes administratifs sont envoyés uniquement aux comptes autorisés ; chaque action est revalidée côté serveur.\n\nOUVERTURE : le bouton APM ou F2 ouvre le panneau ; Z le recentre. Home permet de masquer le bouton et de choisir la touche.\nLe bouton vérifie 16 repères autour de l'écran ; si tous sont occupés, il se superpose en bas à gauche.\nUn registre serveur élit un chargeur ; les copies reconnues du kit, du Core et des composants sont désactivées et rangées en privé.\n\nFONCTIONS : Funny propose un aperçu 3D muet, des décors et des transformations temporaires, avec portées Local, Serveur et Interserveurs, permissions, limites et restauration automatique.\nHome affiche l'identité et l'état du serveur, les performances selon les droits, la recherche et les détails des joueurs connectés ; il actualise ses relevés toutes les 15 s lorsqu'il est visible.\nLes statistiques couvrent l'utilisation du panneau, les joueurs, les performances serveur et les DataStores suivis. Ces relevés restent en mémoire ; APM.TrackDataStore(store, \"Nom\") ajoute les DataStores du jeu.\nConserve tes personnalisations hors Core. L'APM ne télécharge aucun code, ne modifie pas la Source des scripts pendant le jeu et ne publie rien automatiquement.\n\nLANGUES : fr, en, es, pt, de, ru (русский), zh (中文 simplifié).\nLes traductions sont regroupées dans APM_Core > Shared > Lang > Tabs ; les modules par langue et Phrases permettent les compléments et remplacements.\n\nENGLISH\n\nTOOLBOX: insert APM_Kit into Workspace or ServerScriptService, configure the authorized accounts, then start Play.\nKeep ToolboxBootstrap enabled, with RunContext Server. It moves the kit into ServerStorage and continues startup through a private loader in ServerScriptService.\nServerStorage alone does not run scripts. Keep Installer and APM_Bootstrap disabled: they are for the alternative manual installation.\n\nACTIVE CONFIGURATION: APM_Kit.APM_Extensions.Config.ServerSettings and SharedConfig.\nIf a compatible external ServerStorage.APM_Extensions configuration exists, it is preserved and takes priority: edit its Config files instead.\nHome and Diagnostics show the active configuration. Explicitly declare fixed accounts in Settings.Users in the active ServerSettings, using their UserId and chosen rank.\nThe supplied configuration grants no rank automatically. Ranks and permissions saved through the panel still apply.\nAdministrative GUIs and remotes are sent only to authorized accounts; the server validates every action again.\n\nOPENING: the APM button or F2 opens the panel; Z centers it. Home lets you hide the button and choose the key.\nThe button checks 16 positions around the screen; if all are occupied, it overlays the bottom-left corner.\nA server registry elects one loader; recognized duplicate kits, Cores and components are disabled and stored privately.\n\nFEATURES: Funny provides a silent 3D preview, scenes and temporary transformations, with Local, Server and CrossServer scopes, permissions, limits and automatic restoration.\nHome shows server identity and status, performance according to permissions, and search and details for connected players; it refreshes readings every 15 seconds while visible.\nStatistics cover panel usage, players, server performance and tracked DataStores. These readings stay in memory; APM.TrackDataStore(store, \"Name\") adds game DataStores.\nKeep customizations outside Core. APM does not download code, change script Source during gameplay or publish automatically.\n\nLANGUAGES: fr, en, es, pt, de, ru (русский), zh (simplified Chinese / 简体中文).\nTranslations are grouped under APM_Core > Shared > Lang > Tabs; language modules and Phrases support additions and overrides.\n\n\nNOUVEAU 2.10.2 / NEW 2.10.2 : Sentinel (assistant de commandes flottant / floating command assistant) + onglet / tab Sentinel Helper. Voir / see APM_Kit > READ ME!!! > « Sentinel »."
+            }
+          },
+          "Installer": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/APM_Kit/Installer.server.luau",
+            "$properties": {
+              "Archivable": true,
+              "Enabled": false,
+              "RunContext": "Legacy"
+            }
+          },
+          "READ ME!!!": {
+            "$ignoreUnknownInstances": true,
+            "$className": "Folder",
+            "$properties": {
+              "Archivable": true
+            },
+            "0 - Langue · Language · Idioma · Língua · Sprache · Язык · 语言": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/0 - Langue · Language · Idioma · Língua · Sprache · Язык · 语言.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "1 - Français": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/1 - Français.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "2 - English": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/2 - English.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "3 - Español": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/3 - Español.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "4 - Português": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/4 - Português.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "5 - Deutsch": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/5 - Deutsch.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "6 - Русский": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/6 - Русский.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            },
+            "7 - 中文": {
+              "$ignoreUnknownInstances": true,
+              "$path": "src/APM_Kit/READ ME!!!/7 - 中文.luau",
+              "$properties": {
+                "Archivable": true
+              }
+            }
+          },
+          "ToolboxBootstrap": {
+            "$ignoreUnknownInstances": true,
+            "$path": "src/APM_Kit/ToolboxBootstrap.server.luau",
+            "$properties": {
+              "Archivable": true,
+              "Enabled": true,
+              "RunContext": "Server"
             }
           }
-        },
-        "Bootstrap": {
-          "$ignoreUnknownInstances": true,
-          "$path": "Bootstrap.luau"
-        },
-        "Release": {
-          "$ignoreUnknownInstances": true,
-          "$path": "Release.luau"
-        },
-        "Migrations": {
-          "$ignoreUnknownInstances": true,
-          "$path": "Migrations.luau"
-        },
-        "LICENSE": {
-          "$ignoreUnknownInstances": true,
-          "$className": "StringValue",
-          "$properties": {
-            "Value": "MIT License\n\nCopyright (c) 2026 APM contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
-          }
-        }
-      },
-      "APM_Extensions": {
-        "$ignoreUnknownInstances": true,
-        "$className": "Folder",
-        "$attributes": {
-          "APMExtensionsSchema": {
-            "Float64": 1
-          }
-        },
-        "Config": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder",
-          "ServerSettings": {
-            "$ignoreUnknownInstances": true,
-            "$path": "extensions/ServerSettings.luau"
-          },
-          "SharedConfig": {
-            "$ignoreUnknownInstances": true,
-            "$path": "extensions/SharedConfig.luau"
-          }
-        },
-        "Commands": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder"
-        },
-        "Adapters": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder"
-        },
-        "Server": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder"
-        },
-        "ClientPages": {
-          "$ignoreUnknownInstances": true,
-          "$className": "Folder"
-        }
-      }
-    },
-    "ServerScriptService": {
-      "$className": "ServerScriptService",
-      "$ignoreUnknownInstances": true,
-      "APM_Bootstrap": {
-        "$ignoreUnknownInstances": true,
-        "$path": "installation/APM_Bootstrap.server.luau",
-        "$attributes": {
-          "APMBootstrapApi": {
-            "Float64": 1
-          },
-          "AllowExperimental": {
-            "Bool": true
-          }
-        },
-        "$properties": {
-          "Disabled": true
         }
       }
     }

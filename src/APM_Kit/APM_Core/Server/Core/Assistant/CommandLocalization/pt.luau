@@ -1,0 +1,68 @@
+-- Português: vocabulário de comandos do Sentinel. Apenas palavras; a lógica está em CommandLocalization. Maiúsculas e acentos não importam.
+-- As chaves de Commands são os nomes de módulo do APM (a ação canônica).
+return {
+	Code = "pt", Name = "Português", Order = 4,
+	Commands = {
+		Kick = { "expulsar", "kickar", "chutar" },
+		Ban = { "banir" },
+		Unban = { "desbanir" },
+		Kill = { "matar" },
+		Freeze = { "congelar", "imobilizar" },
+		Mute = { "silenciar", "mutar" },
+		Warn = { "avisar", "advertir" },
+		Heal = { "curar", "sarar" },
+		Respawn = { "renascer", "reaparecer", "ressuscitar" },
+		Teleport = { "teleportar", "tp", "ir" },
+		Bring = { "trazer", "puxar" },
+		Return = { "devolver", "retornar" },
+		ToSpawn = { "spawn" },
+		Invisible = { "invisível", "sumir" },
+		Godmode = { "deus", "invencível", "modo deus" },
+		Speed = { "velocidade", "vel" },
+		JumpPower = { "pulo", "pular", "forçapulo" },
+		Leaderstats = { "estatísticas", "stats" },
+		GiveTool = { "dar", "entregar" },
+		TimeOfDay = { "hora", "horário" },
+		Shutdown = { "desligar servidor", "fechar servidor", "encerrar servidor" },
+		Fly = { "voar" },
+		Noclip = { "atravessar", "nc" },
+		ESP = { "radar" },
+		Spectator = { "observar", "espectar" },
+	},
+	Off = {
+		Freeze = { "descongelar" },
+		Mute = { "desmutar" },
+		Invisible = { "visível", "aparecer" },
+		Godmode = { "mortal", "vulnerável" },
+	},
+	-- "parar de voar", "deixar de voar", "desativar radar"... (gerado para todos os comandos reversíveis)
+	OffPrefixes = { "parar", "pare", "parar de", "deixar de", "desativar" },
+	Selectors = {
+		Me = { "eu", "mim", "mesmo" },
+		All = { "todos", "todas", "tudo" },
+	},
+	Booleans = {
+		On = { "sim", "ativar", "ativa", "ativado", "ligar", "ligado" },
+		Off = { "não", "desativar", "desativa", "desativado", "desligar", "desligado" },
+	},
+	Reset = { "redefinir", "padrão", "restaurar", "reiniciar" },
+	Polite = { "por", "favor", "porfavor", "pf" },
+	Units = {
+		Seconds = { "s", "seg", "segs", "segundo", "segundos" },
+		Minutes = { "m", "min", "minuto", "minutos" },
+		Hours = { "h", "hora", "horas" },
+		Days = { "d", "dia", "dias" },
+	},
+	Local = {
+		Help = { "ajuda" },
+		List = { "lista", "comandos" },
+		Clear = { "limpar" },
+	},
+	Choices = {
+		give = { "dar", "adicionar", "somar" },
+		take = { "tirar", "remover", "subtrair" },
+		set = { "definir", "fixar" },
+		once = { "único" },
+		keep = { "manter", "guardar", "permanente" },
+	},
+}

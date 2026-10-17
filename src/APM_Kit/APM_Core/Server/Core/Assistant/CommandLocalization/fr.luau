@@ -1,0 +1,68 @@
+-- Français : vocabulaire de commande de Sentinel. Seulement des mots ; la logique est dans CommandLocalization. Accents et majuscules sont indifférents.
+-- Les clés de Commands sont les noms de modules de l'APM (action canonique) ; les alias historiques (tp, vol, god...) restent valables.
+return {
+	Code = "fr", Name = "Français", Order = 1,
+	Commands = {
+		Kick = { "expulser", "expulse", "virer", "kicker" },
+		Ban = { "bannir", "bannis" },
+		Unban = { "débannir", "débannis", "déban" },
+		Kill = { "tuer", "tue" },
+		Freeze = { "geler", "gèle", "fige", "figer", "immobiliser" },
+		Mute = { "muet", "muter", "silence" },
+		Warn = { "avertir", "avertis", "warning" },
+		Heal = { "soigner", "soin", "guérir" },
+		Respawn = { "réapparaître", "réapparais", "réapparition" },
+		Teleport = { "téléporter", "tp", "goto", "aller" },
+		Bring = { "amener", "ramener" },
+		Return = { "renvoyer", "retour" },
+		ToSpawn = { "spawn" },
+		Invisible = { "invisible", "invis", "vanish", "invisibilité" },
+		Godmode = { "god", "dieu", "invincible" },
+		Speed = { "vitesse", "walkspeed", "ws" },
+		JumpPower = { "jump", "saut", "jp" },
+		Leaderstats = { "stats", "stat", "statistiques" },
+		GiveTool = { "give", "donner", "offrir" },
+		TimeOfDay = { "time", "heure" },
+		Shutdown = { "arrêt", "arrêter serveur", "éteindre serveur", "fermer serveur" },
+		Fly = { "voler", "vol" },
+		Noclip = { "nc", "clip", "traverser" },
+		ESP = { "radar" },
+		Spectator = { "spectate", "spec", "observer", "spectateur" },
+	},
+	Off = {
+		Freeze = { "dégeler", "dégèle", "défiger", "défige" },
+		Mute = { "démuter" },
+		Invisible = { "visible" },
+		Godmode = { "vulnérable", "mortel" },
+	},
+	-- « arrêter de voler », « stop vol », « désactiver radar »... (généré pour toutes les commandes annulables)
+	OffPrefixes = { "stop", "arrêter", "arrêter de", "arrêter le", "désactiver", "désactiver le", "couper", "couper le" },
+	Selectors = {
+		Me = { "moi", "je", "moi-même", "self" },
+		All = { "tous", "tout", "toutes" },
+	},
+	Booleans = {
+		On = { "oui", "activer", "active", "activé", "allumer" },
+		Off = { "non", "désactiver", "désactive", "désactivé", "éteindre" },
+	},
+	Reset = { "défaut", "réinitialiser", "normal" },
+	Polite = { "stp", "svp", "sil", "te", "plait" },
+	Units = {
+		Seconds = { "s", "sec", "secs", "seconde", "secondes" },
+		Minutes = { "m", "min", "mn", "minute", "minutes" },
+		Hours = { "h", "heure", "heures" },
+		Days = { "j", "jour", "jours" },
+	},
+	Local = {
+		Help = { "aide" },
+		List = { "liste", "commandes" },
+		Clear = { "effacer", "vider" },
+	},
+	Choices = {
+		give = { "donner", "ajouter" },
+		take = { "retirer", "enlever" },
+		set = { "définir", "fixer" },
+		once = { "unique" },
+		keep = { "garder", "permanent" },
+	},
+}

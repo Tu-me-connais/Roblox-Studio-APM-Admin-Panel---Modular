@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "version": "2.10.2",
+  "date": "2026-10-17",
+  "source": "Workspace.APM_DistributionKits.APM_Kit",
+  "studioMode": "Edit",
+  "readOnly": true,
+  "restorePointsUsed": false,
+  "instancesCompared": 214,
+  "sourceHashesCompared": 183,
+  "metadataMismatches": 0,
+  "sourceHashMismatches": 0,
+  "sourceBytes": 2405061,
+  "languages": [
+    "fr",
+    "en",
+    "es",
+    "pt",
+    "de",
+    "ru",
+    "zh"
+  ],
+  "languageSelectorIncluded": true,
+  "baselineCommit": "77094cf677d51f49748962b6c8d7893a2ba80de0",
+  "backupBranch": "backup/apm-before-2.10.2-2026-10-17",
+  "comparison": {
+    "commonSourcePaths": 78,
+    "changedSources": 56,
+    "identicalSources": 22,
+    "addedSources": 105,
+    "removedMappedSourcePaths": 0
+  },
+  "anonymization": {
+    "changedSourceFiles": 10,
+    "accountExamples": 3,
+    "authorCredits": 16
+  },
+  "privacyScan": {
+    "detectedRemainingSecrets": 0,
+    "detectedRemainingPersonalData": 0
+  },
+  "builderIntegrityTestsPassed": 8,
+  "runtimeTested": false,
+  "rojoBinaryBuildTested": false
+}

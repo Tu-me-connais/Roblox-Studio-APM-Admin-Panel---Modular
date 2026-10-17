@@ -1,74 +1,56 @@
-# APM | Admin Panel - Modular
+# APM | Admin Panel - Modular — V2.10.2
 
-APM est un panneau d'administration Roblox modulaire. La distribution officielle est gratuite. Cette évolution prolonge l'APM existant : Home conserve AutoBridge, les commandes natives, les grades et permissions, les sessions privées et Sentinel Guard.
+Ce dépôt contient l’export de la version active **APM V2.10.2** du kit Roblox Studio `Workspace.APM_DistributionKits.APM_Kit`, lu par l’accès MCP Studio. La source est ce kit actif ; les points de restauration ne servent pas de source à cet export.
 
-Cette distribution prépare la séparation entre le Core officiel actualisable et les extensions propres à une expérience. Elle est livrée comme **version expérimentale `2.1.0-preview.1`**. Aucun Roblox Package ni dépôt GitHub n'est publié par la préparation locale de ces fichiers.
+Les scripts et modules, leur hiérarchie, leurs classes, attributs, tags et propriétés de démarrage sont décrits dans `manifest.json`. Les sources sont conservées en UTF-8, avec leurs retours à la ligne. Les valeurs des instances `StringValue`, dont le guide `INSTALLATION`, figurent également dans le manifeste.
 
-## Version et contrats
+## Documentation incluse
 
-| Champ du manifeste `APM_Core.Release` | Valeur |
-| --- | --- |
-| `Version` | `2.1.0-preview.1` |
-| `Channel` | `experimental` |
-| `CoreApiVersion` | `1` |
-| `ExtensionApiVersion` | `1` |
-| `ExtensionsSchema` | `1` |
-| `DataSchemaVersion` | `2` |
-| `BootstrapApiVersion` | `1` |
-| `InstallationSchema` | `3` |
+Le [dossier des guides](src/APM_Kit/READ%20ME!!!/) contient le sélecteur **« 0 - Langue · Language · Idioma · Língua · Sprache · Язык · 语言 »** et les sept guides : français, anglais, espagnol, portugais, allemand, russe et chinois. Commencer par le sélecteur, puis lire le guide de la langue choisie avant l’installation ou la configuration.
 
-Le bootstrap refuse un contrat futur qu'il ne prend pas en charge. Le canal expérimental exige l'attribut booléen `AllowExperimental=true` sur `ServerScriptService.APM_Bootstrap`. Les numéros APM sont indépendants du numéro de révision d'un asset Roblox Package.
+## Installation dans une expérience
 
-## Architecture installée
+La procédure Toolbox documentée dans le kit consiste à insérer `APM_Kit` dans **Workspace** ou **ServerScriptService**, configurer les comptes autorisés, puis lancer Play. `ToolboxBootstrap` reste **activé**, avec `RunContext = Server` : il range le kit dans `ServerStorage` et poursuit le démarrage avec un chargeur privé dans `ServerScriptService`.
+
+`ServerStorage` seul ne lance pas les scripts. `Installer` et `APM_Bootstrap` restent **désactivés** dans le kit ; ils servent à la procédure manuelle alternative décrite dans les guides.
+
+Configurer `APM_Kit.APM_Extensions.Config.ServerSettings` et `SharedConfig`. Si une configuration externe compatible `ServerStorage.APM_Extensions` existe, elle est conservée et prioritaire. Home et Diagnostics indiquent la configuration active. Déclarer explicitement les comptes fixes dans `Settings.Users` du `ServerSettings` actif, avec leur UserId et leur grade ; la configuration distribuée n’accorde aucun grade automatiquement.
+
+## Organisation des sources
 
 ```text
-ServerStorage
-├── APM_Core                   candidat au Package officiel
-│   ├── Server                 services, sécurité et commandes officiels
-│   ├── Shared                 composants partagés publics
-│   ├── ClientTemplates        interface administrative privée
-│   ├── Bootstrap              démarrage officiel
-│   └── Release                manifeste de version
-├── APM_Extensions             hors Package, appartient au développeur
-│   ├── Config
-│   │   ├── ServerSettings
-│   │   └── SharedConfig
-│   ├── Commands
-│   ├── Adapters
-│   ├── Server
-│   └── ClientPages
-└── APM_RestorePoints           sauvegardes indépendantes
-
-ServerScriptService
-└── APM_Bootstrap               amorçage externe minimal
+src/APM_Kit/
+├── APM_Core/                  serveur, modules partagés et modèles clients
+├── APM_Extensions/            configurations et extensions
+├── APM_DeveloperTemplates/    exemples destinés aux développeurs
+├── READ ME!!!/                sélecteur et sept guides
+├── ToolboxBootstrap.server.luau
+├── Installer.server.luau
+└── APM_Bootstrap.server.luau
 ```
 
-Personnaliser les configurations et les extensions dans `APM_Extensions`. Les scripts officiels du Core ne sont plus l'emplacement des adaptations d'une expérience. Le bootstrap requiert les services depuis le Core privé ; les éléments partagés sont générés au runtime depuis cette même version. Les modèles clients administratifs sont distribués par le système de sessions aux utilisateurs autorisés.
+Un script ayant des enfants est représenté par son fichier `.luau` et un dossier du même nom pour ces enfants. Les dossiers vides et les `StringValue` sont préservés dans le manifeste, même lorsqu’ils n’ont pas de fichier source.
 
-Home reste l'accueil central : systèmes AutoBridge détectés, états d'intégration, informations serveur, Sentinel et diagnostics. Les réglages avancés d'AutoBridge restent dans Home, avec les permissions serveur existantes. Les valeurs affichées proviennent des systèmes et du serveur.
+## Reconstruction et vérification locale
 
-## Installation et mises à jour
+Avec Python 3.10 ou plus récent, sans dépendance supplémentaire :
 
-Lire [Distribution, installation et mises à jour](docs/Distribution.md) avant l'installation.
+```sh
+python build.py
+python build.py --check
+python -m unittest discover -s tests -v
+```
 
-Le modèle `.rbxmx` contient un bundle privé `APM_Distribution` avec le Core, les extensions initiales, un bootstrap désactivé et un installer désactivé. Placer le bundle dans `ServerStorage`, examiner le code, puis exécuter l'installer **en mode Edit**. L'installer refuse les collisions : une ancienne installation nécessite une migration contrôlée, pas une nouvelle copie par-dessus.
+La première commande génère `default.project.json`. `--check` vérifie le manifeste, les parents et les chemins uniques, la présence de chaque source, l’absence de fichiers oubliés sous `src`, les empreintes `sourceSha256` lorsqu’elles sont fournies, et la correspondance du projet généré. Elle ne réécrit pas les fichiers.
 
-`default.project.json` fournit la description Rojo générée pour reconstruire la structure depuis les sources. Un import Rojo ou `.rbxmx` ne crée pas à lui seul un `PackageLink` Roblox. La conversion en Package et sa publication sont des opérations Studio distinctes.
+Le projet Rojo nécessite **Rojo 7.5 ou plus récent**, pour ses règles de classe explicites par script. Il reconstruit le kit dans `Workspace.APM_DistributionKits.APM_Kit`. Les classes des scripts sont fixées par `syncRules` ; les autres instances portent `$className`. Aucun script APM n’est exécuté par le builder.
 
-Les exemples d'extensions sont des ressources à lire et à adapter. Ils ne sont pas installés automatiquement dans l'expérience.
+Les contrôles locaux portent sur l’intégrité de l’export et de sa description. Ils ne constituent pas une validation du fonctionnement en jeu, une importation Studio, une publication d’expérience ou une publication Roblox Package.
 
-## Vérification
+## Fidélité et confidentialité
 
-Les résultats de validation accompagnant la livraison indiquent les essais réellement effectués. Avant un déploiement dans une autre expérience, vérifier ses extensions, permissions, sessions privées, sauvegardes et intégrations. Un essai en Studio ne remplace pas un essai de sauvegarde et de déploiement dans une expérience publiée.
+Les empreintes SHA-256 du manifeste portent sur les octets des sources distribuées. La copie distribuée remplace les identifiants de trois exemples commentés de comptes par un identifiant générique et les crédits personnels par « APM contributors ». Ces substitutions sont les seuls écarts intentionnels aux sources Studio ; elles sont détaillées dans [SYNC_REPORT.md](SYNC_REPORT.md). Aucun secret ni donnée personnelle n’est inclus dans l’export.
 
-Les mises à jour de Package se récupèrent dans Studio. Elles ne modifient pas instantanément les serveurs existants : il faut tester et publier les places, puis choisir le renouvellement des serveurs.
+La lecture et l’export du kit ne modifient pas le projet Studio. La reconstruction Rojo est une opération distincte, à effectuer dans une copie de travail avant tout déploiement.
 
-## Sources et licence
-
-Les sources sont préparées pour un dépôt GitHub public et pour la création de versions dérivées. APM est distribué sous la **licence MIT**, reproduite dans [LICENSE](LICENSE). Aucun dépôt GitHub n'a été publié par cette préparation locale.
-
-Les modèles `.rbxmx` contiennent aussi le texte MIT complet dans `APM_Core.LICENSE` (`StringValue`). Le Core et le bundle portent l'attribut `APMLicense="MIT"`.
-
-MIT permet les forks, modifications, redistributions et usages commerciaux, y compris la vente de copies, avec conservation des notices nécessaires. La distribution officielle gratuite n'interdit donc pas la vente de versions dérivées. Voir les conditions dans [Distribution](docs/Distribution.md#sources-github-et-licence) et la provenance dans [NOTICE.md](NOTICE.md).
-
-Le plugin **Sentinel Audit** constitue une distribution Studio indépendante. Il complète l'audit de développement ; **Sentinel Guard** appartient au Core runtime.
+APM est distribué sous licence MIT ; voir [LICENSE](LICENSE).
